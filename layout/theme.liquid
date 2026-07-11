@@ -293,7 +293,7 @@
         font-style: normal;
         font-weight: 600;
         font-display: swap;
-        src: url('{{ 'bricolage-grotesque-600.woff2' | asset_url }}') format('woff2');
+        src: url('{{ 'bricolage-grotesque-600.ttf' | asset_url }}') format('truetype');
       }
 
       @font-face {
@@ -301,23 +301,39 @@
         font-style: normal;
         font-weight: 700;
         font-display: swap;
-        src: url('{{ 'bricolage-grotesque-700.woff2' | asset_url }}') format('woff2');
+        src: url('{{ 'bricolage-grotesque-700.ttf' | asset_url }}') format('truetype');
       }
 
       @font-face {
-        font-family: 'Newsreader';
+        font-family: 'DIN 2014';
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url('{{ 'newsreader-400-normal.woff2' | asset_url }}') format('woff2');
+        src: url('{{ 'din-2014-regular.woff' | asset_url }}') format('woff');
       }
 
       @font-face {
-        font-family: 'Newsreader';
+        font-family: 'DIN 2014';
         font-style: italic;
         font-weight: 400;
         font-display: swap;
-        src: url('{{ 'newsreader-400-italic.woff2' | asset_url }}') format('woff2');
+        src: url('{{ 'din-2014-italic.woff' | asset_url }}') format('woff');
+      }
+
+      @font-face {
+        font-family: 'DIN 2014';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url('{{ 'din-2014-demi.woff' | asset_url }}') format('woff');
+      }
+
+      @font-face {
+        font-family: 'DIN 2014';
+        font-style: italic;
+        font-weight: 600;
+        font-display: swap;
+        src: url('{{ 'din-2014-demi-italic.woff' | asset_url }}') format('woff');
       }
     </style>
 

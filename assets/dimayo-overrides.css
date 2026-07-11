@@ -17,10 +17,10 @@
   --font-heading-style: normal;
   --font-heading-weight: 600;
 
-  --font-body-family: 'Newsreader', serif;
+  --font-body-family: 'DIN 2014', sans-serif;
   --font-body-style: normal;
   --font-body-weight: 400;
-  --font-body-weight-bold: 500;
+  --font-body-weight-bold: 600;
 
   /* Paleta DIMAYO (PRD 2.1) — Lacquer y Alert no son colores de esquema,
      viven acá porque se usan en puntos puntuales, no como fondo/texto. */
@@ -61,6 +61,12 @@ h1, h2, h3, h4, h5, h6,
 button[type='submit'] {
   font-family: var(--font-heading-family);
   letter-spacing: 0.1em;
+}
+
+/* Menú de footer: usa la tipografía de títulos (Bricolage), no la de body. */
+.footer .list-menu__item,
+.footer-block__heading {
+  font-family: var(--font-heading-family);
 }
 
 /* ------------------------------------------------------------------ */
@@ -110,7 +116,7 @@ select,
 }
 
 .color-scheme-3 .rich-text__heading {
-  font-family: 'Newsreader', serif;
+  font-family: var(--font-body-family);
   font-style: italic;
   font-weight: 400;
   text-transform: none;
@@ -131,7 +137,7 @@ select,
 /* ------------------------------------------------------------------ */
 
 .dimayo-piece-number {
-  font-family: 'Newsreader', serif;
+  font-family: var(--font-body-family);
   font-style: italic;
   font-size: 1.4rem;
   color: var(--dimayo-ash);
@@ -157,7 +163,7 @@ select,
 }
 
 .dimayo-why p {
-  font-family: 'Newsreader', serif;
+  font-family: var(--font-body-family);
   font-style: italic;
   font-size: 1.6rem;
   line-height: 1.75;
@@ -232,7 +238,7 @@ select,
 }
 
 .dimayo-discontinued__note {
-  font-family: 'Newsreader', serif;
+  font-family: var(--font-body-family);
   font-style: italic;
   font-size: 1.3rem;
   color: var(--dimayo-ash);
@@ -264,7 +270,7 @@ select,
 
 .dimayo-shipping-note {
   text-align: center;
-  font-family: 'Newsreader', serif;
+  font-family: var(--font-body-family);
   font-style: italic;
   color: var(--dimayo-ash);
   font-size: 1.3rem;
@@ -279,7 +285,7 @@ select,
 }
 
 .dimayo-cart-suggested__sub {
-  font-family: 'Newsreader', serif;
+  font-family: var(--font-body-family);
   font-style: italic;
   color: var(--dimayo-ash);
   font-size: 1.4rem;
@@ -386,7 +392,7 @@ select,
 
 .dimayo-curatorial-caption {
   display: block;
-  font-family: 'Newsreader', serif;
+  font-family: var(--font-body-family);
   font-style: italic;
   font-size: 1.3rem;
   color: var(--dimayo-ash);
