@@ -81,6 +81,13 @@ button[type='submit'] {
   font-weight: 400;
 }
 
+/* El link de la página actual (ej. "Explorar") recibe un <span class="header__active-menu-item">
+   interno con su propio text-decoration: underline (base.css) — no lo cubre la regla de arriba
+   porque apunta al <a>, no a ese span hijo. */
+.header__inline-menu .header__active-menu-item {
+  text-decoration: none;
+}
+
 /* Header — "Mi Carrito" como texto en vez de ícono (sin buscador, ver header.liquid) */
 .header__icon--cart-text {
   width: auto;
