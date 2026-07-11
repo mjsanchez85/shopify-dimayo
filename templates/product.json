@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -56,7 +65,8 @@
           "settings": {
             "heading": "Origen",
             "icon": "map_pin",
-            "content": "<p>Diseño y fabricación por DIMAYO en Buenos Aires, Argentina.</p>"
+            "content": "<p>Diseño y fabricación por DIMAYO en Buenos Aires, Argentina.</p>",
+            "page": ""
           }
         },
         "spec-material": {
@@ -64,7 +74,8 @@
           "settings": {
             "heading": "Material",
             "icon": "box",
-            "content": "<p>Materiales nobles, detallados por producto en esta sección.</p>"
+            "content": "<p>Materiales nobles, detallados por producto en esta sección.</p>",
+            "page": ""
           }
         },
         "spec-info": {
@@ -72,7 +83,8 @@
           "settings": {
             "heading": "Información",
             "icon": "check_mark",
-            "content": "<p>Terminado a mano. Compatible con configuraciones de escritorio estándar.</p>"
+            "content": "<p>Terminado a mano. Compatible con configuraciones de escritorio estándar.</p>",
+            "page": ""
           }
         }
       },
@@ -92,7 +104,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -107,5 +119,7 @@
       }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
