@@ -207,6 +207,15 @@
               {%- endif -%}
 
               {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+              {%- if card_product.metafields.custom.curatorial_note != blank -%}
+                {%- comment -%}
+                  DIMAYO — etiqueta curatorial (PRD 2.4): 1 línea tipo cédula
+                  de museo bajo cada producto. Se completa por producto en
+                  Admin → metacampo custom.curatorial_note; sin este dato no
+                  se muestra nada (no hay copy genérico de relleno).
+                {%- endcomment -%}
+                <span class="dimayo-curatorial-caption">{{ card_product.metafields.custom.curatorial_note }}</span>
+              {%- endif -%}
               {%- if card_product.quantity_price_breaks_configured? -%}
                 {% if card_product.variants_count == 1 and quick_add == 'bulk' %}
                   {% liquid

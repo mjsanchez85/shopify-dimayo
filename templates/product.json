@@ -1,1 +1,111 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"uppercase"}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"description":{"type":"description","settings":{}},"share":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["vendor","title","price","variant_picker","quantity_selector","buy_buttons","description","share"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-1","media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"stacked","mobile_thumbnails":"hide","media_position":"left","image_zoom":"lightbox","hide_variants":true,"enable_video_looping":false,"padding_top":36,"padding_bottom":12}},"disclosures":{"type":"disclosures","settings":{"padding_top":36,"padding_bottom":0}},"related-products":{"type":"related-products","settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"columns_mobile":"2","color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"padding_top":36,"padding_bottom":28}}},"order":["main","disclosures","related-products"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "piece-number": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p class=\"dimayo-piece-number\">Pieza 1 de la selección actual</p>"
+          }
+        },
+        "sku": {
+          "type": "sku",
+          "settings": {
+            "text_style": "uppercase"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "square"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "why-we-chose-it": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"dimayo-why\"><span class=\"dimayo-why__eyebrow\">Por qué la elegimos</span><p>Evaluamos varias alternativas de este mismo objeto. Elegimos esta por el detalle que sostiene el uso diario, no por el que se ve en la foto.</p></div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "spec-origen": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Origen",
+            "icon": "map_pin",
+            "content": "<p>Diseño y fabricación por DIMAYO en Buenos Aires, Argentina.</p>"
+          }
+        },
+        "spec-material": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Material",
+            "icon": "box",
+            "content": "<p>Materiales nobles, detallados por producto en esta sección.</p>"
+          }
+        },
+        "spec-info": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Información",
+            "icon": "check_mark",
+            "content": "<p>Terminado a mano. Compatible con configuraciones de escritorio estándar.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "piece-number",
+        "sku",
+        "variant_picker",
+        "price",
+        "quantity_selector",
+        "buy_buttons",
+        "why-we-chose-it",
+        "description",
+        "spec-origen",
+        "spec-material",
+        "spec-info"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-4",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": ["main"]
+}

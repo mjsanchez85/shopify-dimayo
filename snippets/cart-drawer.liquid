@@ -10,6 +10,9 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
+{%- if settings.cart_drawer_upsell_product != blank -%}
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 
 <style>
   .drawer {
@@ -506,6 +509,62 @@
               >{{ cart.note }}</textarea>
             </cart-note>
           </details>
+        {%- endif -%}
+
+        {%- if cart != empty and settings.cart_drawer_upsell_product != blank -%}
+          {%- comment -%}
+            DIMAYO — upsell de 1 producto (Dimayo-PRD.md, sección 6, fila 15).
+            Máximo 1 producto, botón ghost (Lacquer ya está asignado en esta
+            vista al hover de "Agregar al Carrito"). Producto configurable en
+            Theme Settings → Carrito → Producto sugerido en el cart drawer.
+          {%- endcomment -%}
+          {%- assign upsell_product = settings.cart_drawer_upsell_product -%}
+          <div class="dimayo-drawer-upsell">
+            <span class="dimayo-drawer-upsell__label">Sumá a tu selección</span>
+            <div class="dimayo-drawer-upsell__row">
+              <a href="{{ upsell_product.url }}">
+                {{
+                  upsell_product.featured_image
+                  | image_url: width: 150
+                  | image_tag: class: 'dimayo-drawer-upsell__image', widths: '72,110,150'
+                }}
+              </a>
+              <div class="dimayo-drawer-upsell__info">
+                <p class="dimayo-drawer-upsell__name">
+                  <a href="{{ upsell_product.url }}">{{ upsell_product.title }}</a>
+                </p>
+                <p class="dimayo-drawer-upsell__price">{{ upsell_product.price | money }}</p>
+              </div>
+              <product-form>
+                {%- form 'product',
+                  upsell_product,
+                  id: 'CartDrawer-Upsell-Form',
+                  novalidate: 'novalidate',
+                  data-type: 'add-to-cart-form'
+                -%}
+                  <input
+                    type="hidden"
+                    name="id"
+                    value="{{ upsell_product.selected_or_first_available_variant.id }}"
+                  >
+                  <button
+                    type="submit"
+                    name="add"
+                    class="dimayo-ghost-btn"
+                    {% if upsell_product.selected_or_first_available_variant.available == false %}
+                      disabled
+                    {% endif %}
+                  >
+                    {%- if upsell_product.selected_or_first_available_variant.available == false -%}
+                      {{ 'products.product.sold_out' | t }}
+                    {%- else -%}
+                      {{ 'products.product.add_to_cart' | t }}
+                    {%- endif -%}
+                  </button>
+                {%- endform -%}
+              </product-form>
+            </div>
+          </div>
         {%- endif -%}
 
         <!-- Start blocks -->

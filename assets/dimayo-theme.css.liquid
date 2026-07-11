@@ -1,0 +1,427 @@
+/*
+  DIMAYO — Overrides de tema sobre Dawn 15.5.0
+  Sistema de diseño: docs/Dimayo-PRD.md (Opción C — "Objeto Editado")
+
+  Este archivo se enlaza en layout/theme.liquid DESPUÉS de base.css, así que
+  gana la cascada sin tener que tocar los componentes core de Dawn.
+  No editar sections/*.liquid para lograr esto — todo pasa por clases y
+  variables CSS ya expuestas por el tema.
+*/
+
+/* ------------------------------------------------------------------ */
+/* 1. Tipografía self-hosted (PRD 2.2)                                  */
+/* ------------------------------------------------------------------ */
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('{{ "bricolage-grotesque-600.woff2" | asset_url }}') format('woff2');
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('{{ "bricolage-grotesque-700.woff2" | asset_url }}') format('woff2');
+}
+
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('{{ "newsreader-400-normal.woff2" | asset_url }}') format('woff2');
+}
+
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('{{ "newsreader-400-italic.woff2" | asset_url }}') format('woff2');
+}
+
+:root {
+  /* Sobrescribe las variables que Dawn genera desde el font_picker */
+  --font-heading-family: 'Bricolage Grotesque', sans-serif;
+  --font-heading-style: normal;
+  --font-heading-weight: 600;
+
+  --font-body-family: 'Newsreader', serif;
+  --font-body-style: normal;
+  --font-body-weight: 400;
+  --font-body-weight-bold: 500;
+
+  /* Paleta DIMAYO (PRD 2.1) — Lacquer y Alert no son colores de esquema,
+     viven acá porque se usan en puntos puntuales, no como fondo/texto. */
+  --dimayo-ink: #1a1917;
+  --dimayo-gallery: #f4f2ed;
+  --dimayo-panel: #edeae2;
+  --dimayo-concrete: #b7b3aa;
+  --dimayo-ash: #7a776f;
+  --dimayo-lacquer: #8c2320;
+  --dimayo-alert: #b23a2e;
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. Tipografía — jerarquía y tracking (PRD 2.2)                       */
+/* ------------------------------------------------------------------ */
+
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5,
+.product__title h1 {
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Nombre de producto en PDP: sin itálica, la itálica queda reservada
+   para el texto curatorial (PRD 6, fila 3 y 11). */
+.product__title h1,
+.product__title h2 {
+  font-style: normal;
+}
+
+.button,
+.product-form__submit,
+.cart__checkout-button,
+.newsletter-form__button,
+.quick-add__submit,
+button[type='submit'] {
+  font-family: var(--font-heading-family);
+  letter-spacing: 0.1em;
+}
+
+/* ------------------------------------------------------------------ */
+/* 3. Esquinas rectas y swatches cuadrados (PRD 2.4)                    */
+/* ------------------------------------------------------------------ */
+
+.button,
+.field__input,
+.select__select,
+.quantity,
+.swatch,
+input,
+select,
+.card,
+.media {
+  border-radius: 0 !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* 4. Regla dura de Lacquer — aparece exactamente una vez por vista     */
+/*    (PRD 2.1). Selectores estables de Dawn, sin IDs dinámicos:        */
+/*    - PDP: hover de "Agregar al Carrito" (.product-form__submit)      */
+/*    - Carrito (página + drawer): hover de "Continuar a Pagar"         */
+/*    - Home: mark de la banda de criterio, ver sección 6               */
+/* ------------------------------------------------------------------ */
+
+.product-form__submit:hover,
+.product-form__submit:focus-visible {
+  background: var(--dimayo-lacquer) !important;
+  border-color: var(--dimayo-lacquer) !important;
+}
+
+.cart__checkout-button:hover,
+.cart__checkout-button:focus-visible {
+  background: var(--dimayo-lacquer) !important;
+  border-color: var(--dimayo-lacquer) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* 5. Home — "Criterio de selección" (rich-text sobre scheme-3)         */
+/*    scheme-3 (Concrete) se usa una sola vez en todo el sitio: acá.    */
+/*    El mark es el único Lacquer de la vista Home.                    */
+/* ------------------------------------------------------------------ */
+
+.color-scheme-3 .rich-text__caption {
+  color: rgba(var(--color-foreground), 0.65);
+}
+
+.color-scheme-3 .rich-text__heading {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.color-scheme-3 .rich-text__heading::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 0 auto 28px;
+  background: var(--dimayo-lacquer);
+}
+
+/* ------------------------------------------------------------------ */
+/* 6. PDP — bloques curatoriales custom (custom_liquid en main-product) */
+/* ------------------------------------------------------------------ */
+
+.dimayo-piece-number {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--dimayo-ash);
+  margin: 0 0 1.2rem;
+}
+
+.dimayo-why {
+  background: var(--dimayo-panel);
+  border-left: 2px solid var(--dimayo-ink);
+  padding: 2.4rem 2.6rem;
+  margin: 2.8rem 0;
+}
+
+.dimayo-why__eyebrow {
+  display: block;
+  font-family: var(--font-heading-family);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--dimayo-ash);
+  margin-bottom: 1rem;
+}
+
+.dimayo-why p {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.dimayo-why p + p {
+  margin-top: 1rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* 7. Botón ghost (PRD 2.4) — usado en sugeridos de carrito y drawer    */
+/* ------------------------------------------------------------------ */
+
+.dimayo-ghost-btn {
+  display: inline-block;
+  width: 100%;
+  background: transparent;
+  color: var(--dimayo-ink);
+  border: 1px solid var(--dimayo-ink);
+  padding: 1.2rem 1.4rem;
+  font-family: var(--font-heading-family);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.dimayo-ghost-btn:hover {
+  opacity: 0.6;
+}
+
+/* ------------------------------------------------------------------ */
+/* 8. Home — "Lo que ya no está"                                       */
+/* ------------------------------------------------------------------ */
+
+.dimayo-discontinued {
+  background: var(--dimayo-gallery);
+}
+
+.dimayo-discontinued__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4.4rem;
+  max-width: 76rem;
+}
+
+.dimayo-discontinued__card {
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+  opacity: 0.7;
+}
+
+.dimayo-discontinued__image {
+  width: 100px;
+  height: 80px;
+  flex: 0 0 100px;
+  background: var(--dimayo-concrete);
+  object-fit: cover;
+}
+
+.dimayo-discontinued__name {
+  font-family: var(--font-heading-family);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.6rem;
+}
+
+.dimayo-discontinued__note {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--dimayo-ash);
+  margin: 0;
+}
+
+@media screen and (max-width: 749px) {
+  .dimayo-discontinued__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 9. Carrito — nota internacional / alerta y sugerido                  */
+/* ------------------------------------------------------------------ */
+
+.dimayo-alert-note {
+  text-align: center;
+  font-family: var(--font-heading-family);
+  font-size: 1.2rem;
+  color: var(--dimayo-alert);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  max-width: 64rem;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.dimayo-shipping-note {
+  text-align: center;
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  color: var(--dimayo-ash);
+  font-size: 1.3rem;
+}
+
+.dimayo-cart-suggested {
+  background: var(--dimayo-gallery);
+}
+
+.dimayo-cart-suggested__title {
+  margin-bottom: 0.6rem;
+}
+
+.dimayo-cart-suggested__sub {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  color: var(--dimayo-ash);
+  font-size: 1.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.dimayo-cart-suggested__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3.2rem;
+  max-width: 64rem;
+}
+
+.dimayo-cart-suggested__card {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.dimayo-cart-suggested__image {
+  width: 88px;
+  height: 70px;
+  flex: 0 0 88px;
+  background: var(--dimayo-panel);
+  object-fit: cover;
+}
+
+.dimayo-cart-suggested__name {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.dimayo-cart-suggested__price {
+  font-size: 1.3rem;
+  color: var(--dimayo-ash);
+  margin: 0.2rem 0 1rem;
+}
+
+@media screen and (max-width: 749px) {
+  .dimayo-cart-suggested__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 10. Carrito drawer — upsell de 1 producto (PRD 6 fila 15)            */
+/* ------------------------------------------------------------------ */
+
+.dimayo-drawer-upsell {
+  border-top: 1px solid rgba(var(--color-foreground), 0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.dimayo-drawer-upsell__label {
+  display: block;
+  font-family: var(--font-heading-family);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dimayo-ash);
+  margin-bottom: 1.2rem;
+}
+
+.dimayo-drawer-upsell__row {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.dimayo-drawer-upsell__image {
+  width: 72px;
+  height: 56px;
+  flex: 0 0 72px;
+  background: var(--dimayo-panel);
+  object-fit: cover;
+}
+
+.dimayo-drawer-upsell__info {
+  flex: 1;
+}
+
+.dimayo-drawer-upsell__name {
+  font-size: 1.3rem;
+  margin: 0 0 0.2rem;
+}
+
+.dimayo-drawer-upsell__price {
+  font-size: 1.2rem;
+  color: var(--dimayo-ash);
+  margin: 0 0 0.8rem;
+}
+
+.dimayo-drawer-upsell .dimayo-ghost-btn {
+  width: auto;
+  padding: 0.9rem 1.4rem;
+  font-size: 1rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* 11. Etiqueta curatorial bajo cada producto en grilla (PRD 2.4)       */
+/* ------------------------------------------------------------------ */
+
+.dimayo-curatorial-caption {
+  display: block;
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--dimayo-ash);
+  margin-top: 0.4rem;
+}

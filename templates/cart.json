@@ -1,11 +1,30 @@
 {
   "sections": {
+    "top-cta": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\"><button type=\"submit\" name=\"checkout\" form=\"cart\" class=\"cart__checkout-button button\">Continuar a Pagar</button></div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "alert-note": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\"><p class=\"dimayo-alert-note\">Envío internacional disponible. Revisá los plazos de entrega antes de continuar.</p></div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 40
       }
     },
     "cart-footer": {
@@ -18,23 +37,36 @@
       "blocks": {
         "subtotal": {
           "type": "subtotal",
-          "settings": {
-          }
+          "settings": {}
         },
         "buttons": {
           "type": "buttons",
-          "settings": {
-          }
+          "settings": {}
         }
       },
-      "block_order": [
-        "subtotal",
-        "buttons"
-      ]
+      "block_order": ["subtotal", "buttons"]
+    },
+    "suggested": {
+      "type": "dimayo-cart-suggested",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "heading": "Sumá a tu selección",
+        "subheading": "Pensado para acompañar lo que ya elegiste.",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "shipping-note": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\"><p class=\"dimayo-shipping-note\">La mayoría de los productos se envían juntos, pero algunos pueden enviarse por separado.</p></div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
     }
   },
-  "order": [
-    "cart-items",
-    "cart-footer"
-  ]
+  "order": ["top-cta", "cart-items", "alert-note", "cart-footer", "suggested", "shipping-note"]
 }

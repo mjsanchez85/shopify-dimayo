@@ -28,7 +28,7 @@
         "tiktok": "TikTok"
       }
     },
-    "continue_shopping": "Continue shopping",
+    "continue_shopping": "Seguir viendo la selección",
     "pagination": {
       "label": "Pagination",
       "page": "Page {{ number }}",
@@ -40,9 +40,9 @@
       "reset": "Clear search term"
     },
     "cart": {
-      "view": "View cart ({{ count }})",
-      "view_empty_cart": "View cart",
-      "item_added": "Item added to your cart"
+      "view": "Ver selección ({{ count }})",
+      "view_empty_cart": "Ver selección",
+      "item_added": "Se sumó a tu selección"
     },
     "share": {
       "close": "Close share",
@@ -106,7 +106,7 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "Add to cart",
+      "add_to_cart": "Agregar al Carrito",
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
@@ -166,9 +166,9 @@
         "sale_price": "Sale price",
         "unit_price": "Unit price"
       },
-      "share": "Share this product",
-      "sold_out": "Sold out",
-      "unavailable": "Unavailable",
+      "share": "Compartir este producto",
+      "sold_out": "Ya no forma parte de la selección",
+      "unavailable": "No disponible",
       "vendor": "Vendor",
       "value_unavailable": "{{ option_value }} - Unavailable",
       "variant_sold_out_or_unavailable": "Variant sold out or unavailable",
@@ -284,14 +284,14 @@
       }
     },
     "cart": {
-      "title": "Your cart",
-      "caption": "Cart items",
-      "remove_title": "Remove {{ title }}",
-      "estimated_total": "Estimated total",
-      "new_estimated_total": "New estimated total",
-      "note": "Order special instructions",
-      "checkout": "Check out",
-      "empty": "Your cart is empty",
+      "title": "Tu Selección",
+      "caption": "Productos en tu selección",
+      "remove_title": "Quitar {{ title }}",
+      "estimated_total": "Subtotal",
+      "new_estimated_total": "Nuevo subtotal",
+      "note": "Instrucciones especiales del pedido",
+      "checkout": "Continuar a Pagar",
+      "empty": "Tu selección está vacía todavía.",
       "product_disclosure": "Product disclosure",
       "product_disclosures": "Product disclosures",
       "cart_error": "There was an error while updating your cart. Please try again.",
@@ -305,16 +305,16 @@
       "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
       "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, discounts and shipping calculated at checkout.",
       "headings": {
-        "product": "Product",
-        "price": "Price",
+        "product": "Producto",
+        "price": "Precio",
         "total": "Total",
-        "quantity": "Quantity",
-        "image": "Product image"
+        "quantity": "Cantidad",
+        "image": "Imagen del producto"
       },
-      "update": "Update",
+      "update": "Actualizar",
       "login": {
-        "title": "Have an account?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
+        "title": "¿Ya tenés una cuenta?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Iniciá sesión</a> para pagar más rápido."
       }
     },
     "footer": {

@@ -1,0 +1,148 @@
+{% comment %}
+  DIMAYO — "Lo que ya no está" (Dimayo-PRD.md, sección 5, fila 5).
+  Sección custom: no existe equivalente nativo en Dawn. Refuerza la
+  honestidad de la escasez (mood #4) mostrando piezas discontinuadas,
+  sin tratarlo como una falla de inventario.
+{% endcomment %}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="dimayo-discontinued color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="section-intro{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="h2">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <p class="dimayo-shipping-note" style="text-align:left;margin-top:0.6rem;">
+          {{- section.settings.subheading -}}
+        </p>
+      {%- endif -%}
+    </div>
+
+    <div class="dimayo-discontinued__grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'piece' -%}
+          <div class="dimayo-discontinued__card" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 200
+                | image_tag: class: 'dimayo-discontinued__image', widths: '100,150,200'
+              }}
+            {%- else -%}
+              <div class="dimayo-discontinued__image"></div>
+            {%- endif -%}
+            <div>
+              <p class="dimayo-discontinued__name">{{ block.settings.name | default: 'Pieza sin nombre' }}</p>
+              <p class="dimayo-discontinued__note">
+                {{- block.settings.note | default: 'Ya no forma parte de la selección.' -}}
+              </p>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "DIMAYO — Lo que ya no está",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Encabezado",
+      "default": "Lo que ya no está"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Línea de contexto",
+      "default": "Cada pieza que sumamos reemplazó a otra. Esto es lo que salió de la selección."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "piece",
+      "name": "Pieza discontinuada",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nombre de la pieza"
+        },
+        {
+          "type": "text",
+          "id": "note",
+          "label": "Nota",
+          "default": "Ya no forma parte de la selección."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "DIMAYO — Lo que ya no está",
+      "blocks": [
+        { "type": "piece" },
+        { "type": "piece" }
+      ]
+    }
+  ]
+}
+{% endschema %}

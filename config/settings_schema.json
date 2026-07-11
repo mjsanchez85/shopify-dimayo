@@ -1445,6 +1445,12 @@
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
       },
       {
+        "type": "product",
+        "id": "cart_drawer_upsell_product",
+        "label": "DIMAYO — Producto sugerido en el cart drawer",
+        "info": "PRD 6.15: máximo 1 producto, nunca una grilla. Se muestra con botón ghost cuando el carrito no está vacío."
+      },
+      {
         "type": "color_scheme",
         "id": "cart_color_scheme",
         "label": "t:sections.all.colors.label",
