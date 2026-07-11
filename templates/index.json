@@ -139,6 +139,7 @@
         "piece-1",
         "piece-2"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Lo que ya no está",
         "subheading": "Cada pieza que sumamos reemplazó a otra. Esto es lo que salió de la selección.",
