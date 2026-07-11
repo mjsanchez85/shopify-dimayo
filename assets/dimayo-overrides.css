@@ -69,6 +69,18 @@ button[type='submit'] {
   font-family: var(--font-heading-family);
 }
 
+/* Header — nav principal (Explorar/Tienda): tipografía y color consistentes,
+   sin el subrayado que Dawn aplica por default a .link. Dawn asigna clases
+   distintas según el link tenga submenú o no (ver snippets/header-dropdown-menu.liquid),
+   por eso se pisa a nivel de .header__inline-menu en vez de una clase puntual. */
+.header__inline-menu .link,
+.header__inline-menu .header__menu-item {
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  font-family: var(--font-body-family);
+  font-weight: 400;
+}
+
 /* Header — "Mi Carrito" como texto en vez de ícono (sin buscador, ver header.liquid) */
 .header__icon--cart-text {
   width: auto;
@@ -76,6 +88,7 @@ button[type='submit'] {
   padding: 0.8rem 0;
   margin-right: 0;
   gap: 0.6rem;
+  text-decoration: none;
 }
 
 .header__icon--cart-text-label {
