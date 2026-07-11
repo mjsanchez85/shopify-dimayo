@@ -38,14 +38,19 @@
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
+        "image": "shopify://shop_images/banner_001.webp",
         "image_overlay_opacity": 30,
         "image_height": "large",
+        "image_behavior": "none",
         "desktop_content_position": "middle-right",
         "desktop_content_alignment": "right",
         "show_text_box": false,
-        "image_behavior": "none",
         "color_scheme": "scheme-2",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
@@ -55,20 +60,19 @@
     "seleccion": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 3,
         "title": "La selección de este mes",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 3,
         "columns_desktop": 3,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "link",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -76,6 +80,7 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 96,
         "padding_bottom": 96
       }
@@ -99,7 +104,10 @@
           }
         }
       },
-      "block_order": ["eyebrow", "statement"],
+      "block_order": [
+        "eyebrow",
+        "statement"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -127,7 +135,10 @@
           }
         }
       },
-      "block_order": ["piece-1", "piece-2"],
+      "block_order": [
+        "piece-1",
+        "piece-2"
+      ],
       "settings": {
         "heading": "Lo que ya no está",
         "subheading": "Cada pieza que sumamos reemplazó a otra. Esto es lo que salió de la selección.",
@@ -157,7 +168,11 @@
           "settings": {}
         }
       },
-      "block_order": ["heading", "paragraph", "form"],
+      "block_order": [
+        "heading",
+        "paragraph",
+        "form"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "full_width": true,
@@ -166,5 +181,11 @@
       }
     }
   },
-  "order": ["hero", "seleccion", "criterio", "discontinued", "newsletter"]
+  "order": [
+    "hero",
+    "seleccion",
+    "criterio",
+    "discontinued",
+    "newsletter"
+  ]
 }
