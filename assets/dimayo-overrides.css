@@ -69,6 +69,34 @@ button[type='submit'] {
   font-family: var(--font-heading-family);
 }
 
+/* Header — "Mi Carrito" como texto en vez de ícono (sin buscador, ver header.liquid) */
+.header__icon--cart-text {
+  width: auto;
+  height: auto;
+  padding: 0.8rem 0;
+  margin-right: 0;
+  gap: 0.6rem;
+}
+
+.header__icon--cart-text-label {
+  font-family: var(--font-heading-family);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.header__icon--cart-text .cart-count-bubble {
+  position: static;
+  height: auto;
+  width: auto;
+  border-radius: 0;
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  font-size: 1.1rem;
+}
+
 /* ------------------------------------------------------------------ */
 /* 3. Esquinas rectas y swatches cuadrados (PRD 2.4)                    */
 /* ------------------------------------------------------------------ */
