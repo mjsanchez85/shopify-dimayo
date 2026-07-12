@@ -105,10 +105,10 @@
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
@@ -135,7 +135,10 @@
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -167,7 +170,11 @@
           }
         }
       },
-      "block_order": ["cell-1", "cell-2", "cell-3"],
+      "block_order": [
+        "cell-1",
+        "cell-2",
+        "cell-3"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 0,
@@ -196,7 +203,9 @@
           }
         }
       },
-      "block_order": ["cell-1"],
+      "block_order": [
+        "cell-1"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 0,
@@ -228,7 +237,11 @@
           }
         }
       },
-      "block_order": ["size-1", "size-2", "size-3"],
+      "block_order": [
+        "size-1",
+        "size-2",
+        "size-3"
+      ],
       "settings": {
         "heading": "Guía de Tamaños",
         "subheading": "Revisá las medidas para asegurarte que se adapte a tu home office.",

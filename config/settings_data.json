@@ -14,7 +14,7 @@
     "heading_scale": 100,
     "type_body_font": "sans_serif_n7",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1400,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 32,
     "spacing_grid_vertical": 32,
@@ -142,13 +142,6 @@
       }
     },
     "content_for_index": [],
-    "blocks": {
-      "5182184951224911228": {
-        "type": "shopify://apps/rapid-search/blocks/script/bd827795-feaa-41a8-9219-2b83f238aa7d",
-        "disabled": false,
-        "settings": {}
-      }
-    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
