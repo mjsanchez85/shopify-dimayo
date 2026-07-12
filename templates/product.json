@@ -117,9 +117,133 @@
         "padding_top": 40,
         "padding_bottom": 20
       }
+    },
+    "feature-intro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Elevada y Organizada",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La Repisa de Escritorio DIMAYO ofrece una elevación ergonómica y múltiples tamaños para adaptarse a todos tus dispositivos y pantallas. La fabricamos en madera maciza premium, metal cepillado y corcho natural teñido a mano. Mirá abajo la <a href=\"#sizing-guide\">guía de tamaños</a>.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 96,
+        "padding_bottom": 40
+      }
+    },
+    "collage": {
+      "type": "dimayo-collage",
+      "blocks": {
+        "cell-1": {
+          "type": "cell",
+          "settings": {
+            "caption": "Detalle — teclado y mousepad"
+          }
+        },
+        "cell-2": {
+          "type": "cell",
+          "settings": {
+            "caption": "Escritorio completo — vista general"
+          }
+        },
+        "cell-3": {
+          "type": "cell",
+          "settings": {
+            "caption": "Detalle — soporte de celular"
+          }
+        }
+      },
+      "block_order": ["cell-1", "cell-2", "cell-3"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "storage-feature": {
+      "type": "dimayo-split",
+      "settings": {
+        "layout": "image_first",
+        "image_placeholder": "Detalle — almacenamiento inferior",
+        "heading": "Guardala",
+        "text": "<p>Un compartimento inferior en fieltro de lana organiza tu espacio: un sector más chico ideal para una bandeja de escritorio, espacio amplio para guardar desde objetos sueltos hasta tu laptop, y una curva suave en la parte trasera para el cableado. Sostiene lo que necesitás sin que nada se caiga.</p>",
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 40
+      }
+    },
+    "full-banner": {
+      "type": "dimayo-collage",
+      "blocks": {
+        "cell-1": {
+          "type": "cell",
+          "settings": {
+            "caption": "Repisa de Escritorio — vista completa"
+          }
+        }
+      },
+      "block_order": ["cell-1"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "sizing-guide": {
+      "type": "dimayo-sizing-guide",
+      "blocks": {
+        "size-1": {
+          "type": "size",
+          "settings": {
+            "label": "Pequeña",
+            "dimensions": "47 cm ancho × 23 cm profundidad × 11 cm altura"
+          }
+        },
+        "size-2": {
+          "type": "size",
+          "settings": {
+            "label": "Mediana",
+            "dimensions": "80 cm ancho × 23 cm profundidad × 11 cm altura"
+          }
+        },
+        "size-3": {
+          "type": "size",
+          "settings": {
+            "label": "Grande",
+            "dimensions": "117 cm ancho × 23 cm profundidad × 11 cm altura"
+          }
+        }
+      },
+      "block_order": ["size-1", "size-2", "size-3"],
+      "settings": {
+        "heading": "Guía de Tamaños",
+        "subheading": "Revisá las medidas para asegurarte que se adapte a tu home office.",
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "feature-intro",
+    "collage",
+    "storage-feature",
+    "full-banner",
+    "sizing-guide"
   ]
 }

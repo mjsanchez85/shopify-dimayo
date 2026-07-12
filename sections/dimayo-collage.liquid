@@ -1,0 +1,114 @@
+{% comment %}
+  DIMAYO — Collage de fotos de producto (PDP). Sirve tanto para el
+  collage de 1:2:1 columnas (3 bloques) como para un banner full-width
+  (1 bloque) reusando el mismo componente .dimayo-collage.
+  Sin gradientes decorativos: el placeholder sin foto es un rectángulo
+  Panel liso con el nombre del bloque en Bricolage Grotesque (PRD 2.4).
+{% endcomment %}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="dimayo-collage dimayo-collage--{{ section.blocks.size }}">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'cell' -%}
+        <div class="dimayo-collage__cell" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            {{
+              block.settings.image
+              | image_url: width: 1500
+              | image_tag: widths: '375, 750, 1100, 1500', sizes: '100vw'
+            }}
+          {%- else -%}
+            <div class="dimayo-collage__placeholder">{{ block.settings.caption | default: 'Imagen del producto' }}</div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collage de producto",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "cell",
+      "name": "Imagen",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Texto de placeholder (sin imagen)",
+          "default": "Imagen del producto"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collage de producto",
+      "blocks": [
+        { "type": "cell" },
+        { "type": "cell" },
+        { "type": "cell" }
+      ]
+    }
+  ]
+}
+{% endschema %}

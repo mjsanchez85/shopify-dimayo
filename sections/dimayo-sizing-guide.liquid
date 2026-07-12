@@ -1,0 +1,133 @@
+{% comment %}
+  DIMAYO — Guía de tamaños (PDP). Para productos con múltiples
+  configuraciones de tamaño donde vale la pena mostrar las medidas
+  comparadas, no solo listarlas en el selector de variante.
+{% endcomment %}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} {
+    --dimayo-sizing-columns: {% if section.blocks.size == 1 %}1{% else %}2{% endif %};
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width dimayo-sizing-guide">
+    <div class="section-intro{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="h2">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <p class="dimayo-sizing-guide__intro">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="dimayo-sizing-guide__grid{% if section.blocks.size == 1 %} dimayo-sizing-guide__grid--single{% endif %}">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'size' -%}
+          <div {{ block.shopify_attributes }}>
+            <div class="dimayo-sizing-guide__label">{{ block.settings.label | default: 'Tamaño' }}</div>
+            <div class="dimayo-sizing-guide__shape"></div>
+            <div class="dimayo-sizing-guide__dims">{{ block.settings.dimensions }}</div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Guía de tamaños",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Encabezado",
+      "default": "Guía de Tamaños"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Línea de contexto",
+      "default": "Revisá las medidas para asegurarte que se adapte a tu home office."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "size",
+      "name": "Tamaño",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Nombre",
+          "default": "Mediana"
+        },
+        {
+          "type": "text",
+          "id": "dimensions",
+          "label": "Medidas",
+          "default": "80 cm ancho × 23 cm profundidad × 11 cm altura"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Guía de tamaños",
+      "blocks": [
+        { "type": "size" },
+        { "type": "size" }
+      ]
+    }
+  ]
+}
+{% endschema %}

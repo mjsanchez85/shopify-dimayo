@@ -31,6 +31,9 @@
   --dimayo-ash: #7a776f;
   --dimayo-lacquer: #8c2320;
   --dimayo-alert: #b23a2e;
+
+  /* Swatches 40×40px, sin border-radius (PRD 2.4) */
+  --swatch-input--size: 4rem;
 }
 
 /* ------------------------------------------------------------------ */
@@ -447,4 +450,196 @@ select,
   font-size: 1.3rem;
   color: var(--dimayo-ash);
   margin-top: 0.4rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* 12. PDP — selects de variante (talla/config), estilo underline       */
+/*     (PRD 2.4: "no <select> nativo visible")                          */
+/* ------------------------------------------------------------------ */
+
+.product-form__input--dropdown .select:before,
+.product-form__input--dropdown .select:after {
+  display: none;
+}
+
+.product-form__input--dropdown .select__select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--dimayo-ink);
+  border-radius: 0;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 1.4rem 2.8rem 1.4rem 0;
+  font-family: var(--font-heading-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dimayo-ink);
+}
+
+.product-form__input--dropdown .select .svg-wrapper {
+  right: 0.2rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* 13. PDP — secciones narrativas (collage, feature split, guía de      */
+/*     tamaños). Sin Lacquer: la cuota de esta vista ya está asignada   */
+/*     al hover del botón de compra (PRD 2.1).                          */
+/* ------------------------------------------------------------------ */
+
+.dimayo-collage {
+  display: grid;
+  gap: 2px;
+}
+
+.dimayo-collage--3 {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.dimayo-collage--1 {
+  grid-template-columns: 1fr;
+}
+
+.dimayo-collage__cell {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: var(--dimayo-panel);
+  overflow: hidden;
+}
+
+.dimayo-collage--1 .dimayo-collage__cell {
+  aspect-ratio: 21 / 9;
+}
+
+.dimayo-collage__cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dimayo-collage__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+  text-align: center;
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dimayo-ash);
+}
+
+@media screen and (max-width: 749px) {
+  .dimayo-collage--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dimayo-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.dimayo-split--reverse .dimayo-split__media {
+  order: 2;
+}
+
+.dimayo-split--reverse .dimayo-split__content {
+  order: 1;
+}
+
+.dimayo-split__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--dimayo-panel);
+  overflow: hidden;
+}
+
+.dimayo-split__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dimayo-split__content p {
+  font-family: var(--font-body-family);
+  font-style: italic;
+  color: var(--dimayo-ash);
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-top: 1.4rem;
+}
+
+@media screen and (max-width: 749px) {
+  .dimayo-split {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+}
+
+.dimayo-sizing-guide {
+  text-align: center;
+}
+
+.dimayo-sizing-guide__intro {
+  max-width: 64rem;
+  margin: 0 auto;
+  font-family: var(--font-body-family);
+  color: var(--dimayo-ash);
+  font-size: 1.5rem;
+}
+
+.dimayo-sizing-guide__grid {
+  display: grid;
+  grid-template-columns: repeat(var(--dimayo-sizing-columns, 2), minmax(0, 1fr));
+  gap: 4.8rem 3.2rem;
+  text-align: left;
+  margin-top: 5rem;
+}
+
+.dimayo-sizing-guide__grid--single {
+  grid-template-columns: 1fr;
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dimayo-sizing-guide__label {
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.4rem;
+}
+
+.dimayo-sizing-guide__shape {
+  background: var(--dimayo-panel);
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+  height: 9rem;
+  margin-bottom: 1.2rem;
+}
+
+.dimayo-sizing-guide__dims {
+  font-family: var(--font-body-family);
+  font-style: italic;
+  color: var(--dimayo-ash);
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 749px) {
+  .dimayo-sizing-guide__grid {
+    grid-template-columns: 1fr;
+  }
 }
