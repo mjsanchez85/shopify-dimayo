@@ -101,8 +101,8 @@ button[type='submit'] {
 }
 
 .header__icon--cart-text-label {
-  font-family: var(--font-heading-family);
-  font-size: 1.1rem;
+  font-family: 'DIN 2014', sans-serif;
+  font-size: 1.4rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
