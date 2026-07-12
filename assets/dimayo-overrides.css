@@ -643,3 +643,46 @@ select,
     grid-template-columns: 1fr;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 14. Swatches de material/color por nombre                            */
+/*                                                                        */
+/* El linked-metafield nativo de Shopify (shopify.color-pattern) solo    */
+/* acepta metaobjects de su taxonomía cerrada — rechaza los nuestros     */
+/* (Roble, Nogal, Ink, etc.) aunque estén bien formados. En vez de       */
+/* forzar nombres genéricos de esa taxonomía, coloreamos el swatch acá   */
+/* por el atributo title que Dawn ya renderiza en swatch-input.liquid.   */
+/* ------------------------------------------------------------------ */
+
+.swatch-input__label[title='Roble'] .swatch,
+.swatch-input__label[title='Nogal'] .swatch,
+.swatch-input__label[title='Bronce Cepillado'] .swatch,
+.swatch-input__label[title='Ink'] .swatch,
+.swatch-input__label[title='Concrete'] .swatch,
+.swatch-input__label[title='Ash'] .swatch {
+  border-style: solid;
+}
+
+.swatch-input__label[title='Roble'] .swatch {
+  --swatch--background: #c9a877;
+}
+
+.swatch-input__label[title='Nogal'] .swatch {
+  --swatch--background: #5c3a20;
+}
+
+.swatch-input__label[title='Bronce Cepillado'] .swatch {
+  --swatch--background: #8c7853;
+}
+
+.swatch-input__label[title='Ink'] .swatch {
+  --swatch--background: var(--dimayo-ink);
+}
+
+.swatch-input__label[title='Concrete'] .swatch {
+  --swatch--background: var(--dimayo-concrete);
+}
+
+.swatch-input__label[title='Ash'] .swatch {
+  --swatch--background: var(--dimayo-ash);
+}
