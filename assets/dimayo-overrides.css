@@ -78,7 +78,9 @@ button[type='submit'] {
   text-decoration: none;
   color: rgb(var(--color-foreground));
   font-family: var(--font-body-family);
-  font-weight: 400;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 /* El link de la página actual (ej. "Explorar") recibe un <span class="header__active-menu-item">
