@@ -878,3 +878,44 @@ select,
     margin: 0 auto;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 18. PDP — más aire entre título / variante / precio / botón          */
+/* ------------------------------------------------------------------ */
+
+.dimayo-product-hero .product__title {
+  margin-bottom: 2.4rem;
+}
+
+.dimayo-product-hero .product-form__input--swatch {
+  margin-bottom: 3.2rem;
+}
+
+.dimayo-product-hero .price {
+  margin-bottom: 3.2rem;
+}
+
+.dimayo-product-hero .product-form {
+  margin-top: 0.8rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* 19. PDP — galería tipo carrusel: sin tira de miniaturas, flechas y   */
+/*     contador siempre visibles (Dawn no trae paginación por puntos    */
+/*     para la galería de producto, así que se usa lo nativo).          */
+/* ------------------------------------------------------------------ */
+
+.dimayo-product-hero .thumbnail-slider {
+  display: none !important;
+}
+
+.dimayo-product-hero .product__media-container .slider-buttons,
+.dimayo-product-hero .slider-buttons {
+  display: flex !important;
+}
+
+@media screen and (min-width: 750px) {
+  .dimayo-product-hero .slider-buttons {
+    margin-top: 1.6rem;
+  }
+}
