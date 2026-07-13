@@ -60,12 +60,14 @@
         },
         "why-we-chose-it": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"dimayo-why\"><span class=\"dimayo-why__eyebrow\">Por qué la elegimos</span><p>Evaluamos varias alternativas de este mismo objeto. Elegimos esta por el detalle que sostiene el uso diario, no por el que se ve en la foto.</p></div>"
           }
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         }
       },
