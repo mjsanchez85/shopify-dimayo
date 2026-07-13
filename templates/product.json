@@ -18,12 +18,14 @@
         },
         "piece-number": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<p class=\"dimayo-piece-number\">Pieza 1 de la selección actual</p>"
           }
         },
         "sku": {
           "type": "sku",
+          "disabled": true,
           "settings": {
             "text_style": "uppercase"
           }
@@ -230,13 +232,18 @@
       "type": "related-products",
       "settings": {
         "heading": "Sumá a tu selección",
+        "heading_size": "h1",
         "products_to_show": 4,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
+        "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
-        "show_rating": false
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
