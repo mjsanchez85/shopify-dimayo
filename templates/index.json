@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "El Escritorio",
+            "heading": "Lampara cuello de cisne",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Disponible en roble, nogal y bronce cepillado.",
+            "text": "Disponible en blanco y negro.",
             "text_style": "body"
           }
         },
