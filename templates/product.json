@@ -50,6 +50,12 @@
             "show_gift_card_recipient": false
           }
         },
+        "shipping-estimate": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p class=\"dimayo-shipping-note dimayo-shipping-estimate\">Envío en 3–4 semanas</p>"
+          }
+        },
         "why-we-chose-it": {
           "type": "custom_liquid",
           "settings": {
@@ -59,33 +65,6 @@
         "description": {
           "type": "description",
           "settings": {}
-        },
-        "spec-origen": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Origen",
-            "icon": "map_pin",
-            "content": "<p>Diseño y fabricación por DIMAYO en Buenos Aires, Argentina.</p>",
-            "page": ""
-          }
-        },
-        "spec-material": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Material",
-            "icon": "box",
-            "content": "<p>Materiales nobles, detallados por producto en esta sección.</p>",
-            "page": ""
-          }
-        },
-        "spec-info": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Información",
-            "icon": "check_mark",
-            "content": "<p>Terminado a mano. Compatible con configuraciones de escritorio estándar.</p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -96,16 +75,14 @@
         "price",
         "quantity_selector",
         "buy_buttons",
+        "shipping-estimate",
         "why-we-chose-it",
-        "description",
-        "spec-origen",
-        "spec-material",
-        "spec-info"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "small",
+        "media_size": "large",
         "constrain_to_viewport": false,
         "media_fit": "cover",
         "gallery_layout": "thumbnail_slider",
@@ -212,42 +189,54 @@
         "padding_bottom": 0
       }
     },
-    "sizing-guide": {
-      "type": "dimayo-sizing-guide",
+    "tech-specs": {
+      "type": "dimayo-tech-specs",
       "blocks": {
-        "size-1": {
-          "type": "size",
+        "spec-origen": {
+          "type": "spec",
           "settings": {
-            "label": "Pequeña",
-            "dimensions": "47 cm ancho × 23 cm profundidad × 11 cm altura"
+            "heading": "Origen",
+            "content": "<p>Diseño y fabricación por DIMAYO en Buenos Aires, Argentina.</p>"
           }
         },
-        "size-2": {
-          "type": "size",
+        "spec-material": {
+          "type": "spec",
           "settings": {
-            "label": "Mediana",
-            "dimensions": "80 cm ancho × 23 cm profundidad × 11 cm altura"
+            "heading": "Material",
+            "content": "<p>Materiales nobles, detallados por producto en esta sección.</p>"
           }
         },
-        "size-3": {
-          "type": "size",
+        "spec-info": {
+          "type": "spec",
           "settings": {
-            "label": "Grande",
-            "dimensions": "117 cm ancho × 23 cm profundidad × 11 cm altura"
+            "heading": "Información",
+            "content": "<p>Terminado a mano. Compatible con configuraciones de escritorio estándar.</p>"
           }
         }
       },
       "block_order": [
-        "size-1",
-        "size-2",
-        "size-3"
+        "spec-origen",
+        "spec-material",
+        "spec-info"
       ],
       "settings": {
-        "heading": "Guía de Tamaños",
-        "subheading": "Revisá las medidas para asegurarte que se adapte a tu home office.",
+        "heading": "Especificaciones Técnicas",
         "color_scheme": "scheme-1",
         "padding_top": 96,
         "padding_bottom": 96
+      }
+    },
+    "suggested": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Sumá a tu selección",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false
       }
     }
   },
@@ -257,6 +246,7 @@
     "collage",
     "storage-feature",
     "full-banner",
-    "sizing-guide"
+    "tech-specs",
+    "suggested"
   ]
 }

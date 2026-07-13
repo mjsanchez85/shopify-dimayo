@@ -686,3 +686,157 @@ select,
 .swatch-input__label[title='Ash'] .swatch {
   --swatch--background: var(--dimayo-ash);
 }
+
+/* ------------------------------------------------------------------ */
+/* 15. PDP — hero: fondo propio, columnas y bloque de compra centrado   */
+/* ------------------------------------------------------------------ */
+
+.dimayo-product-hero.gradient {
+  background: #f9f9f9;
+}
+
+.dimayo-product-hero .product-form__input--swatch .swatch-input__input + .swatch-input__label {
+  --swatch-input--size: 4rem;
+}
+
+.dimayo-product-hero .product__title,
+.dimayo-product-hero .product-form__input--swatch,
+.dimayo-product-hero .price,
+.dimayo-product-hero .installment,
+.dimayo-product-hero .product-form {
+  text-align: center;
+}
+
+.dimayo-product-hero .product__title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dimayo-product-hero .product-form__input--swatch {
+  justify-content: center;
+}
+
+.dimayo-product-hero .product-form__input--swatch .form__label {
+  width: 100%;
+}
+
+.dimayo-product-hero .product-form__quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dimayo-shipping-estimate {
+  margin-top: 2rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* 16. PDP — Especificaciones técnicas (PRD 6, fila 13: DIN 2014,       */
+/*     sin itálica — la ficha técnica se lee como dato).                */
+/* ------------------------------------------------------------------ */
+
+.dimayo-tech-specs {
+  text-align: center;
+}
+
+.dimayo-tech-specs__heading {
+  margin-bottom: 5rem;
+}
+
+.dimayo-tech-specs__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4rem;
+  border-top: 1px solid rgba(var(--color-foreground), 0.1);
+  padding-top: 5rem;
+}
+
+.dimayo-tech-specs__col {
+  border-right: 1px solid rgba(var(--color-foreground), 0.1);
+}
+
+.dimayo-tech-specs__col:last-child {
+  border-right: none;
+}
+
+.dimayo-tech-specs__col-heading {
+  font-family: var(--font-heading-family);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.6rem;
+}
+
+.dimayo-tech-specs__col-content {
+  font-family: var(--font-body-family);
+  font-style: normal;
+  color: var(--dimayo-ash);
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.dimayo-tech-specs__col-content p {
+  margin: 0 0 1rem;
+}
+
+.dimayo-tech-specs__col-content p:last-child {
+  margin-bottom: 0;
+}
+
+.dimayo-tech-specs__accordion {
+  display: none;
+}
+
+.dimayo-tech-specs__item {
+  text-align: left;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.12);
+}
+
+.dimayo-tech-specs__item:first-child {
+  border-top: 1px solid rgba(var(--color-foreground), 0.12);
+}
+
+.dimayo-tech-specs__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 2rem 0;
+  cursor: pointer;
+  font-family: var(--font-heading-family);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  list-style: none;
+}
+
+.dimayo-tech-specs__summary::-webkit-details-marker {
+  display: none;
+}
+
+.dimayo-tech-specs__chevron {
+  width: 1rem;
+  height: 0.6rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.dimayo-tech-specs__item[open] .dimayo-tech-specs__chevron {
+  transform: rotate(180deg);
+}
+
+.dimayo-tech-specs__item .dimayo-tech-specs__col-content {
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 749px) {
+  .dimayo-tech-specs__grid {
+    display: none;
+  }
+
+  .dimayo-tech-specs__accordion {
+    display: block;
+  }
+}
