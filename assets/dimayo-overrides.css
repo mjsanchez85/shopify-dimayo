@@ -840,3 +840,41 @@ select,
     display: block;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 17. PDP — hero: foto acotada a 650×650px, columnas fijas             */
+/*     (reemplaza el split porcentual de Dawn small/medium/large)       */
+/* ------------------------------------------------------------------ */
+
+.dimayo-product-hero .product__media-item,
+.dimayo-product-hero .global-media-settings {
+  aspect-ratio: 1 / 1;
+}
+
+.dimayo-product-hero .product__media-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 990px) {
+  .dimayo-product-hero .product.grid {
+    column-gap: 6rem;
+  }
+
+  .dimayo-product-hero .product__media-wrapper,
+  .dimayo-product-hero.gradient .product--medium:not(.product--no-media) .product__media-wrapper,
+  .dimayo-product-hero.gradient .product--large:not(.product--no-media) .product__media-wrapper {
+    max-width: 65rem;
+    width: 100%;
+  }
+
+  .dimayo-product-hero .product__info-wrapper,
+  .dimayo-product-hero.gradient .product--medium:not(.product--no-media) .product__info-wrapper,
+  .dimayo-product-hero.gradient .product--large:not(.product--no-media) .product__info-wrapper {
+    max-width: 44rem;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
