@@ -930,3 +930,22 @@ select,
     margin-top: 1.6rem;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 20. PDP — fija la fila completa (foto + panel) mientras se scrollea  */
+/*     el resto del contenido, en vez de solo el panel de compra. Al    */
+/*     ser un solo elemento el que se fija, foto y panel se mueven      */
+/*     siempre juntos, sin desfase entre ellos. Puro CSS: el wrapper    */
+/*     que Shopify genera para esta sección (.shopify-section) queda    */
+/*     sticky dentro de <main>, que es más alto porque contiene el      */
+/*     resto de las secciones del PDP — se libera solo antes del        */
+/*     footer, que vive fuera de <main>. Sin JS, sin el bug de antes.   */
+/* ------------------------------------------------------------------ */
+
+@media screen and (min-width: 990px) {
+  .shopify-section:has(.dimayo-product-hero) {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+}
