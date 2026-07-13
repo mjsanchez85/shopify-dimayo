@@ -932,18 +932,18 @@ select,
 }
 
 /* ------------------------------------------------------------------ */
-/* 20. PDP — fija la fila completa (foto + panel) mientras se scrollea  */
-/*     el resto del contenido, en vez de solo el panel de compra. Al    */
-/*     ser un solo elemento el que se fija, foto y panel se mueven      */
-/*     siempre juntos, sin desfase entre ellos. Puro CSS: el wrapper    */
-/*     que Shopify genera para esta sección (.shopify-section) queda    */
-/*     sticky dentro de <main>, que es más alto porque contiene el      */
-/*     resto de las secciones del PDP — se libera solo antes del        */
-/*     footer, que vive fuera de <main>. Sin JS, sin el bug de antes.   */
+/* 20. PDP — fija solo la columna de la foto al hacer scroll.           */
+/*     .product__column-sticky NO sirve para aislarla: Dawn le pone     */
+/*     esa misma clase tanto a <media-gallery> como al panel de info    */
+/*     cuando enable_sticky_info está activo (ver main-product.liquid   */
+/*     y product-media-gallery.liquid). Se apunta directo al tag        */
+/*     <media-gallery>, que es único de la columna de fotos — así el    */
+/*     panel de compra y el resto del contenido (specs, sugeridos,      */
+/*     footer) scrollean normal y quedan por delante, no detrás.        */
 /* ------------------------------------------------------------------ */
 
 @media screen and (min-width: 990px) {
-  .shopify-section:has(.dimayo-product-hero) {
+  .dimayo-product-hero media-gallery {
     position: sticky;
     top: 0;
     z-index: 5;
