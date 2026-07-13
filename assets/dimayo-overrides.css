@@ -878,3 +878,29 @@ select,
     margin: 0 auto;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 18. PDP — panel de compra fijo mientras se scrollea el resto del     */
+/*     contenido (dimayo-sticky-buybox.js). El fondo se repite acá     */
+/*     porque position:fixed saca al panel del stacking del hero.       */
+/* ------------------------------------------------------------------ */
+
+.dimayo-sticky-anchor {
+  position: relative;
+}
+
+.dimayo-product-hero .product__column-sticky.dimayo-sticky-fixed {
+  position: fixed !important;
+  top: 3.2rem !important;
+  z-index: 3;
+  background: #f9f9f9;
+  padding: 2rem 0;
+}
+
+.dimayo-product-hero .product__column-sticky.dimayo-sticky-bottom {
+  position: absolute !important;
+  bottom: 0;
+  top: auto !important;
+  width: 100% !important;
+  left: 0 !important;
+}

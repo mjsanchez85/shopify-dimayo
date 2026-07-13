@@ -41,6 +41,9 @@
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  {%- if section.settings.enable_sticky_info -%}
+    <script src="{{ 'dimayo-sticky-buybox.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
   {%- if product.quantity_price_breaks_configured? -%}
     <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
