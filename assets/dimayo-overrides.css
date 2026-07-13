@@ -877,6 +877,17 @@ select,
     padding: 0;
     margin: 0 auto;
   }
+
+  /* Misma técnica que Grovemade (confirmado vía DevTools: position:static,
+     sin sticky/fixed) — ambas columnas miden lo mismo y el contenido se
+     centra verticalmente adentro. Acá no hace falta JS de "match height"
+     porque la foto ya está fijada a 65rem por CSS (ver bloque 17). */
+  .dimayo-product-hero .product__info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 65rem;
+  }
 }
 
 /* ------------------------------------------------------------------ */
