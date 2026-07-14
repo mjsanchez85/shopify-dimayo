@@ -26,7 +26,7 @@
 {%- assign suggested_blocks = section.blocks | where: 'type', 'product' -%}
 
 {%- if cart != empty and suggested_blocks.size > 0 -%}
-  <div class="dimayo-cart-suggested color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="dimayo-cart-page dimayo-cart-suggested color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
     <div class="page-width">
       <h2 class="h3 dimayo-cart-suggested__title">{{ section.settings.heading }}</h2>
       <p class="dimayo-cart-suggested__sub">{{ section.settings.subheading }}</p>

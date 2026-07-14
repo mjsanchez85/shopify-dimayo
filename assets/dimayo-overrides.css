@@ -957,3 +957,197 @@ select,
     z-index: 1;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* 21. Carrito — layout de referencia (PRD 8): contenedor angosto,      */
+/*     lista sin tabla/encabezados, precio arriba a la derecha,         */
+/*     "Quitar" como texto subrayado en vez de ícono.                   */
+/* ------------------------------------------------------------------ */
+
+.dimayo-cart-page.page-width,
+.dimayo-cart-page .page-width {
+  max-width: 96rem;
+}
+
+.dimayo-cart-page .title-wrapper-with-link {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  margin-bottom: 4rem;
+}
+
+.dimayo-cart-page .title-wrapper-with-link .underlined-link {
+  display: none;
+}
+
+/* La tabla de Dawn pasa a leerse como lista simple, sin encabezados,   */
+/* en todos los anchos — no solo en mobile.                             */
+.dimayo-cart-page .cart-items thead {
+  display: none;
+}
+
+.dimayo-cart-page .cart-items,
+.dimayo-cart-page .cart-items tbody {
+  display: block;
+  width: 100%;
+}
+
+.dimayo-cart-page .cart-item {
+  display: grid;
+  grid-template-columns: 15rem 1fr auto;
+  column-gap: 2.4rem;
+  row-gap: 1.2rem;
+  align-items: start;
+  padding: 3.2rem 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
+}
+
+.dimayo-cart-page .cart-item:first-child {
+  padding-top: 0;
+}
+
+.dimayo-cart-page .cart-item__media {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  width: 15rem;
+  padding-top: 0;
+}
+
+.dimayo-cart-page .cart-item__image-container {
+  background: var(--dimayo-panel);
+}
+
+.dimayo-cart-page .cart-item__details {
+  grid-column: 2;
+  grid-row: 1;
+  padding-top: 0;
+}
+
+.dimayo-cart-page .cart-item__quantity {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.dimayo-cart-page .cart-item__quantity-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  flex-wrap: nowrap;
+}
+
+/* Un solo precio por línea (el total de la línea, no el unitario):     */
+/* se fuerza visible el que Dawn reserva para desktop y se apaga el     */
+/* alterno de mobile y el unitario duplicado en los detalles.           */
+.dimayo-cart-page .cart-item__totals.right.small-hide {
+  display: block !important;
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  padding-top: 0;
+}
+
+.dimayo-cart-page .cart-item__totals.medium-hide.large-up-hide,
+.dimayo-cart-page .cart-item__unit-price {
+  display: none;
+}
+
+.dimayo-cart-page .dimayo-cart-item-shipping {
+  font-family: var(--font-body-family);
+  color: var(--dimayo-ash);
+  font-size: 1.3rem;
+  margin-top: 0.8rem;
+}
+
+.dimayo-cart-page .dimayo-cart-item-remove {
+  margin-left: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--dimayo-ink);
+  font-family: var(--font-body-family);
+  font-size: 1.3rem;
+}
+
+.dimayo-cart-page .dimayo-cart-item-remove .svg-wrapper {
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  .dimayo-cart-page .cart-item {
+    grid-template-columns: 10rem 1fr auto;
+  }
+
+  .dimayo-cart-page .cart-item__media {
+    width: 10rem;
+  }
+}
+
+/* Subtotal: fila simple, sin la nota de impuestos/envío de Dawn         */
+.dimayo-cart-page .cart__footer {
+  max-width: 96rem;
+}
+
+.dimayo-cart-page .totals {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.dimayo-cart-page .totals__total {
+  font-family: var(--font-body-family);
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.dimayo-cart-page .totals__total-value {
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+}
+
+.dimayo-cart-page .tax-note {
+  display: none;
+}
+
+/* Sugeridos: tarjetas verticales centradas en vez de filas horizontales */
+.dimayo-cart-page.dimayo-cart-suggested {
+  text-align: center;
+}
+
+.dimayo-cart-page .dimayo-cart-suggested__title,
+.dimayo-cart-page .dimayo-cart-suggested__sub {
+  text-align: center;
+}
+
+.dimayo-cart-page .dimayo-cart-suggested__grid {
+  grid-template-columns: repeat(2, minmax(0, 18rem));
+  justify-content: center;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.dimayo-cart-page .dimayo-cart-suggested__card {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+}
+
+.dimayo-cart-page .dimayo-cart-suggested__image {
+  width: 100%;
+  height: 14rem;
+  flex-basis: auto;
+}
+
+.dimayo-cart-page .dimayo-ghost-btn {
+  width: auto;
+  padding: 1rem 2rem;
+}
