@@ -17,6 +17,11 @@
   --font-heading-style: normal;
   --font-heading-weight: 600;
 
+  /* Solo para H1–H6 y nombres de producto — botones/labels/nav siguen
+     en Bricolage Grotesque (--font-heading-family, sin tocar). Cargada
+     vía Google Fonts en layout/theme.liquid. */
+  --font-title-family: 'Playfair Display', serif;
+
   --font-body-family: 'DIN 2014', sans-serif;
   --font-body-style: normal;
   --font-body-weight: 400;
@@ -43,7 +48,7 @@
 h1, h2, h3, h4, h5, h6,
 .h0, .h1, .h2, .h3, .h4, .h5,
 .product__title h1 {
-  font-family: var(--font-heading-family);
+  font-family: var(--font-title-family);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -283,7 +288,7 @@ select,
 }
 
 .dimayo-discontinued__name {
-  font-family: var(--font-heading-family);
+  font-family: var(--font-title-family);
   font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
