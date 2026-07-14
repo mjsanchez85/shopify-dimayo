@@ -37,7 +37,7 @@
         "shipping-estimate": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<p class=\"dimayo-shipping-note dimayo-shipping-estimate\">Envío en 3–4 semanas</p>"
+            "custom_liquid": "<p class=\"dimayo-shipping-note dimayo-shipping-estimate\">Envío en 24hs dentro de CABA y el resto del país en 2–3 días.</p>"
           }
         }
       },
