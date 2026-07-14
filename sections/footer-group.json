@@ -23,9 +23,8 @@
         },
         "brand": {
           "type": "brand_information",
-          "disabled": true,
           "settings": {
-            "show_social": true
+            "show_social": false
           }
         }
       },
