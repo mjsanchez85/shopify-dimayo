@@ -286,12 +286,12 @@
       }
     },
     "cart": {
-      "title": "Tu carrito",
-      "caption": "Artículos en el carrito",
-      "remove_title": "Eliminar {{ title }}",
+      "title": "Tu Selección",
+      "caption": "Productos en tu selección",
+      "remove_title": "Quitar {{ title }}",
       "note": "Instrucciones especiales del pedido",
-      "checkout": "Pagar pedido",
-      "empty": "Tu carrito esta vacío",
+      "checkout": "Continuar a Pagar",
+      "empty": "Tu selección está vacía todavía.",
       "product_disclosure": "Aviso sobre el producto",
       "product_disclosures": "Avisos sobre el producto",
       "cart_error": "Hubo un error al actualizar tu carrito de compra. Inténtalo de nuevo.",
@@ -308,8 +308,8 @@
         "title": "¿Tienes una cuenta?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Inicia sesión</a> para finalizar tus compras con mayor rapidez."
       },
-      "estimated_total": "Total estimado",
-      "new_estimated_total": "Nuevo total estimado",
+      "estimated_total": "Subtotal",
+      "new_estimated_total": "Nuevo subtotal",
       "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Aranceles e impuestos incluidos. Descuentos y <a href=\"{{ link }}\">envío</a> calculados en la pantalla de pago.",
       "duties_and_taxes_included_shipping_at_checkout_without_policy": "Aranceles e impuestos incluidos. Descuentos y envío calculados en la pantalla de pago.",
       "taxes_included_shipping_at_checkout_with_policy_html": "Impuestos incluidos. Descuentos y <a href=\"{{ link }}\">envío</a> calculados en la pantalla de pago.",
