@@ -940,12 +940,19 @@ select,
 /*     <media-gallery>, que es único de la columna de fotos — así el    */
 /*     panel de compra y el resto del contenido (specs, sugeridos,      */
 /*     footer) scrollean normal y quedan por delante, no detrás.        */
+/*                                                                        */
+/*     top usa --header-height (seteado por JS en header.liquid según   */
+/*     el alto real del header) para que la foto se detenga justo        */
+/*     debajo del header al re-aparecer en scroll hacia arriba, no en    */
+/*     el borde superior tapándolo. z-index 1 queda por debajo del       */
+/*     header (.section-header usa z-index:3), así el header siempre     */
+/*     se ve completo por encima.                                        */
 /* ------------------------------------------------------------------ */
 
 @media screen and (min-width: 990px) {
   .dimayo-product-hero media-gallery {
     position: sticky;
-    top: 0;
-    z-index: 5;
+    top: var(--header-height, 74px);
+    z-index: 1;
   }
 }
