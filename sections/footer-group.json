@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -8,18 +17,21 @@
         "links": {
           "type": "link_list",
           "settings": {
-            "heading": "Tienda",
+            "heading": "",
             "menu": "footer"
           }
         },
         "brand": {
           "type": "brand_information",
           "settings": {
-            "show_social": true
+            "show_social": false
           }
         }
       },
-      "block_order": ["links", "brand"],
+      "block_order": [
+        "links",
+        "brand"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
@@ -36,5 +48,7 @@
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }
