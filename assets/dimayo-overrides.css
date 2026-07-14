@@ -329,8 +329,16 @@ select,
   font-size: 1.3rem;
 }
 
+/* "Sumá a tu selección" — tarjetas verticales tipo "Frequently bought
+   together" de grovemade.com/my-cart: grilla horizontal, imagen
+   cuadrada, sin borde de tarjeta (separación por espacio en blanco),
+   botón quick-add gris de ancho completo. La grilla soporta hasta 3
+   columnas — el tope real de productos sigue siendo 2 (ver schema de
+   la sección, PRD 8 fila 6: catálogo corto, sugerir de más se siente
+   a relleno), así que hoy siempre se ven 2 tarjetas centradas. */
 .dimayo-cart-suggested {
   background: var(--dimayo-gallery);
+  text-align: center;
 }
 
 .dimayo-cart-suggested__title {
@@ -347,39 +355,68 @@ select,
 
 .dimayo-cart-suggested__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 18rem));
+  justify-content: center;
   gap: 3.2rem;
   max-width: 64rem;
+  margin: 0 auto;
 }
 
 .dimayo-cart-suggested__card {
   display: flex;
-  gap: 1.8rem;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 
 .dimayo-cart-suggested__image {
-  width: 88px;
-  height: 70px;
-  flex: 0 0 88px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   background: var(--dimayo-panel);
   object-fit: cover;
 }
 
 .dimayo-cart-suggested__name {
   font-size: 1.4rem;
-  margin-bottom: 0.2rem;
+  margin: 0;
 }
 
 .dimayo-cart-suggested__price {
   font-size: 1.3rem;
   color: var(--dimayo-ash);
-  margin: 0.2rem 0 1rem;
+  margin: 0 0 0.4rem;
+}
+
+.dimayo-cart-suggested__quick-add {
+  display: block;
+  width: 100%;
+  border: none;
+  background: var(--dimayo-panel);
+  color: var(--dimayo-ink);
+  padding: 1.1rem 1.4rem;
+  font-family: var(--font-heading-family);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dimayo-cart-suggested__quick-add:hover {
+  background: var(--dimayo-concrete);
+}
+
+.dimayo-cart-suggested__quick-add[aria-disabled='true'] {
+  opacity: 0.6;
+  cursor: default;
 }
 
 @media screen and (max-width: 749px) {
   .dimayo-cart-suggested__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 40rem;
   }
 }
 
@@ -1117,37 +1154,5 @@ select,
   display: none;
 }
 
-/* Sugeridos: tarjetas verticales centradas en vez de filas horizontales */
-.dimayo-cart-page.dimayo-cart-suggested {
-  text-align: center;
-}
-
-.dimayo-cart-page .dimayo-cart-suggested__title,
-.dimayo-cart-page .dimayo-cart-suggested__sub {
-  text-align: center;
-}
-
-.dimayo-cart-page .dimayo-cart-suggested__grid {
-  grid-template-columns: repeat(2, minmax(0, 18rem));
-  justify-content: center;
-  max-width: none;
-  margin: 0 auto;
-}
-
-.dimayo-cart-page .dimayo-cart-suggested__card {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1.2rem;
-}
-
-.dimayo-cart-page .dimayo-cart-suggested__image {
-  width: 100%;
-  height: 14rem;
-  flex-basis: auto;
-}
-
-.dimayo-cart-page .dimayo-ghost-btn {
-  width: auto;
-  padding: 1rem 2rem;
-}
+/* Las reglas de .dimayo-cart-suggested__* ya cubren el diseño de       */
+/* tarjetas verticales de forma base — ver más arriba en este archivo.  */

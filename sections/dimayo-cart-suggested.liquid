@@ -1,13 +1,16 @@
 {% comment %}
   DIMAYO — "Sumá a tu selección" (Dimayo-PRD.md, sección 8, fila 6).
   Sección custom: related-products.liquid no aplica en /cart porque no hay
-  `product` en contexto. Máximo 2 productos, botón ghost (Lacquer ya está
-  asignado en esta vista al botón "Continuar a Pagar").
-  Reusa el patrón <product-form> + data-type="add-to-cart-form" que Dawn
-  ya cablea globalmente (product-form.js), sin JS propio.
+  `product` en contexto. Máximo 2 productos (catálogo corto — ver PRD).
+  Estilo tarjeta vertical con quick-add gris, tipo "Frequently bought
+  together" de Grovemade. No usa <product-form>/product-form.js: esa
+  clase redirige a /cart cuando no hay cart-drawer/cart-notification en
+  la página (cart_type="page" acá), lo que recargaría esta misma
+  página. dimayo-cart-quick-add.js hace el fetch directo a /cart/add.js
+  y publica el mismo evento cartUpdate que ya escucha <cart-items>.
 {% endcomment %}
 
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'dimayo-cart-quick-add.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -39,46 +42,30 @@
               <a href="{{ suggested_product.url }}">
                 {{
                   suggested_product.featured_image
-                  | image_url: width: 200
-                  | image_tag: class: 'dimayo-cart-suggested__image', widths: '88,150,200'
+                  | image_url: width: 300
+                  | image_tag: class: 'dimayo-cart-suggested__image', widths: '150,200,300'
                 }}
               </a>
-              <div>
-                <p class="dimayo-cart-suggested__name">
-                  <a href="{{ suggested_product.url }}">{{ suggested_product.title }}</a>
-                </p>
-                <p class="dimayo-cart-suggested__price">
-                  {{- suggested_product.price | money -}}
-                </p>
-                <product-form>
-                  {%- form 'product',
-                    suggested_product,
-                    id: 'dimayo-cart-suggested-form-' | append: block.id,
-                    novalidate: 'novalidate',
-                    data-type: 'add-to-cart-form'
-                  -%}
-                    <input
-                      type="hidden"
-                      name="id"
-                      value="{{ suggested_product.selected_or_first_available_variant.id }}"
-                    >
-                    <button
-                      type="submit"
-                      name="add"
-                      class="dimayo-ghost-btn"
-                      {% if suggested_product.selected_or_first_available_variant.available == false %}
-                        disabled
-                      {% endif %}
-                    >
-                      {%- if suggested_product.selected_or_first_available_variant.available == false -%}
-                        {{ 'products.product.sold_out' | t }}
-                      {%- else -%}
-                        {{ 'products.product.add_to_cart' | t }}
-                      {%- endif -%}
-                    </button>
-                  {%- endform -%}
-                </product-form>
-              </div>
+              <p class="dimayo-cart-suggested__name">
+                <a href="{{ suggested_product.url }}">{{ suggested_product.title }}</a>
+              </p>
+              <p class="dimayo-cart-suggested__price">
+                {{- suggested_product.price | money -}}
+              </p>
+              <button
+                type="button"
+                class="dimayo-cart-suggested__quick-add"
+                data-variant-id="{{ suggested_product.selected_or_first_available_variant.id }}"
+                {% if suggested_product.selected_or_first_available_variant.available == false %}
+                  disabled
+                {% endif %}
+              >
+                {%- if suggested_product.selected_or_first_available_variant.available == false -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- else -%}
+                  {{ 'products.product.add_to_cart' | t }}
+                {%- endif -%}
+              </button>
             </div>
           {%- endif -%}
         {%- endfor -%}
