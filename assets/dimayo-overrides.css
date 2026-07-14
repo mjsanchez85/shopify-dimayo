@@ -932,17 +932,18 @@ select,
 }
 
 /* ------------------------------------------------------------------ */
-/* 20. PDP — fija solo la columna de la foto al hacer scroll.           */
-/*     .product__column-sticky NO sirve para aislarla: Dawn le pone     */
-/*     esa misma clase tanto a <media-gallery> como al panel de info    */
-/*     cuando enable_sticky_info está activo (ver main-product.liquid   */
-/*     y product-media-gallery.liquid). Se apunta directo al tag        */
-/*     <media-gallery>, que es único de la columna de fotos — así el    */
-/*     panel de compra y el resto del contenido (specs, sugeridos,      */
-/*     footer) scrollean normal y quedan por delante, no detrás.        */
+/* 20. PDP — fija foto y panel de compra en sync al hacer scroll.       */
+/*     Dawn le pone la misma clase .product__column-sticky tanto a      */
+/*     <media-gallery> como a .product__info-container cuando           */
+/*     enable_sticky_info está activo (ver main-product.liquid y        */
+/*     product-media-gallery.liquid) — se apunta ahí directo para que    */
+/*     ambas columnas usen el mismo top/z-index y se muevan juntas,      */
+/*     sin desfase entre ellas. El resto del contenido (specs,           */
+/*     sugeridos, footer) sigue scrolleando normal por delante, ya que   */
+/*     no se fija la fila completa, solo estas dos columnas angostas.    */
 /*                                                                        */
 /*     top usa --header-height (seteado por JS en header.liquid según   */
-/*     el alto real del header) para que la foto se detenga justo        */
+/*     el alto real del header) para que ambas se detengan justo         */
 /*     debajo del header al re-aparecer en scroll hacia arriba, no en    */
 /*     el borde superior tapándolo. z-index 1 queda por debajo del       */
 /*     header (.section-header usa z-index:3), así el header siempre     */
@@ -950,7 +951,7 @@ select,
 /* ------------------------------------------------------------------ */
 
 @media screen and (min-width: 990px) {
-  .dimayo-product-hero media-gallery {
+  .dimayo-product-hero .product__column-sticky {
     position: sticky;
     top: var(--header-height, 74px);
     z-index: 1;
