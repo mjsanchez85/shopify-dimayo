@@ -146,15 +146,16 @@ select,
 /* ------------------------------------------------------------------ */
 /* 4. Regla dura de Lacquer — aparece exactamente una vez por vista     */
 /*    (PRD 2.1). Selectores estables de Dawn, sin IDs dinámicos:        */
-/*    - PDP: hover de "Agregar al Carrito" (.product-form__submit)      */
 /*    - Carrito (página + drawer): hover de "Continuar a Pagar"         */
 /*    - Home: mark de la banda de criterio, ver sección 6               */
+/*    "Agregar al Carrito" (PDP) queda excluido a pedido explícito:      */
+/*    su hover es gris, no Lacquer.                                    */
 /* ------------------------------------------------------------------ */
 
 .product-form__submit:hover,
 .product-form__submit:focus-visible {
-  background: var(--dimayo-lacquer) !important;
-  border-color: var(--dimayo-lacquer) !important;
+  background: #404040 !important;
+  border-color: #404040 !important;
 }
 
 .cart__checkout-button:hover,
