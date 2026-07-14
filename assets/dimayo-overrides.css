@@ -1131,10 +1131,27 @@ select,
   max-width: 96rem;
 }
 
+/* Botón "Continuar a Pagar": más ancho que el tope de 36rem de Dawn,   */
+/* sigue centrado por el text-align:center de .cart__ctas.              */
+.dimayo-cart-page .cart__checkout-button {
+  max-width: 50rem;
+}
+
+/* Dawn empuja .cart__blocks entero a la derecha vía margin-left:auto  */
+/* sobre el único hijo de .cart__footer — lo neutralizamos para que    */
+/* el subtotal pueda ocupar todo el ancho y quedar realmente a la      */
+/* izquierda (el space-between de abajo no tiene efecto si la fila     */
+/* está achicada a su contenido).                                      */
+.dimayo-cart-page .cart__footer > div:only-child {
+  margin-left: 0;
+  width: 100%;
+}
+
 .dimayo-cart-page .totals {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  width: 100%;
 }
 
 .dimayo-cart-page .totals__total {
