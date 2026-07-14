@@ -100,18 +100,21 @@
         "cell-1": {
           "type": "cell",
           "settings": {
+            "image": "shopify://shop_images/lamp_002.png",
             "caption": "Detalle — teclado y mousepad"
           }
         },
         "cell-2": {
           "type": "cell",
           "settings": {
+            "image": "shopify://shop_images/white_0001.jpg",
             "caption": "Escritorio completo — vista general"
           }
         },
         "cell-3": {
           "type": "cell",
           "settings": {
+            "image": "shopify://shop_images/lamp_004.png",
             "caption": "Detalle — soporte de celular"
           }
         }
@@ -131,6 +134,7 @@
       "type": "dimayo-split",
       "settings": {
         "layout": "image_first",
+        "image": "shopify://shop_images/lamp_003.png",
         "image_placeholder": "Detalle — almacenamiento inferior",
         "heading": "Guardala",
         "text": "<p>Un compartimento inferior en fieltro de lana organiza tu espacio: un sector más chico ideal para una bandeja de escritorio, espacio amplio para guardar desde objetos sueltos hasta tu laptop, y una curva suave en la parte trasera para el cableado. Sostiene lo que necesitás sin que nada se caiga.</p>",
@@ -145,6 +149,7 @@
         "cell-1": {
           "type": "cell",
           "settings": {
+            "image": "shopify://shop_images/banner_001.webp",
             "caption": "Repisa de Escritorio — vista completa"
           }
         }
