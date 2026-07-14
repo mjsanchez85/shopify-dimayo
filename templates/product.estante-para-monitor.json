@@ -1,0 +1,226 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "swatch",
+            "swatch_shape": "square"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "shipping-estimate": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p class=\"dimayo-shipping-note dimayo-shipping-estimate\">Envío en 24hs dentro de CABA y el resto del país en 2–3 días.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "variant_picker",
+        "price",
+        "buy_buttons",
+        "shipping-estimate"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 60,
+        "padding_bottom": 32
+      }
+    },
+    "feature-intro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Elevada y Organizada",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La Repisa de Escritorio DIMAYO ofrece una elevación ergonómica y múltiples tamaños para adaptarse a todos tus dispositivos y pantallas. La fabricamos en madera maciza premium, metal cepillado y corcho natural teñido a mano. Una repisa elevada para tu monitor o notebook, con un compartimento inferior en fieltro de lana que organiza cables y objetos sueltos sin que nada quede a la vista.</p><p>Soporta hasta 22 kg. Terminación a mano en roble macizo, nogal americano o bronce cepillado.</p><p>Mirá abajo la <a href=\"#sizing-guide\">guía de tamaños</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 96,
+        "padding_bottom": 40
+      }
+    },
+    "collage": {
+      "type": "dimayo-collage",
+      "blocks": {
+        "cell-1": {
+          "type": "cell",
+          "settings": {
+            "caption": "Detalle — teclado y mousepad"
+          }
+        },
+        "cell-2": {
+          "type": "cell",
+          "settings": {
+            "caption": "Escritorio completo — vista general"
+          }
+        },
+        "cell-3": {
+          "type": "cell",
+          "settings": {
+            "caption": "Detalle — soporte de celular"
+          }
+        }
+      },
+      "block_order": [
+        "cell-1",
+        "cell-2",
+        "cell-3"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "storage-feature": {
+      "type": "dimayo-split",
+      "settings": {
+        "layout": "image_first",
+        "image_placeholder": "Detalle — almacenamiento inferior",
+        "heading": "Guardala",
+        "text": "<p>Un compartimento inferior en fieltro de lana organiza tu espacio: un sector más chico ideal para una bandeja de escritorio, espacio amplio para guardar desde objetos sueltos hasta tu laptop, y una curva suave en la parte trasera para el cableado. Sostiene lo que necesitás sin que nada se caiga.</p>",
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 40
+      }
+    },
+    "full-banner": {
+      "type": "dimayo-collage",
+      "blocks": {
+        "cell-1": {
+          "type": "cell",
+          "settings": {
+            "caption": "Repisa de Escritorio — vista completa"
+          }
+        }
+      },
+      "block_order": [
+        "cell-1"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "tech-specs": {
+      "type": "dimayo-tech-specs",
+      "blocks": {
+        "spec-origen": {
+          "type": "spec",
+          "settings": {
+            "heading": "Origen",
+            "content": "<p>Diseño y fabricación por DIMAYO en Buenos Aires, Argentina.</p>"
+          }
+        },
+        "spec-material": {
+          "type": "spec",
+          "settings": {
+            "heading": "Material",
+            "content": "<p>Materiales nobles, detallados por producto en esta sección.</p>"
+          }
+        },
+        "spec-info": {
+          "type": "spec",
+          "settings": {
+            "heading": "Información",
+            "content": "<p>Terminado a mano. Compatible con configuraciones de escritorio estándar.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "spec-origen",
+        "spec-material",
+        "spec-info"
+      ],
+      "settings": {
+        "heading": "Especificaciones Técnicas",
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "suggested": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Sumá a tu selección",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "feature-intro",
+    "collage",
+    "storage-feature",
+    "full-banner",
+    "tech-specs",
+    "suggested"
+  ]
+}
