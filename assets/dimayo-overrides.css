@@ -1135,6 +1135,8 @@ select,
 /* sigue centrado por el text-align:center de .cart__ctas.              */
 .dimayo-cart-page .cart__checkout-button {
   max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Dawn empuja .cart__blocks entero a la derecha vía margin-left:auto  */
