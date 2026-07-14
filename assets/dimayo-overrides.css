@@ -49,17 +49,9 @@ h1, h2, h3, h4, h5, h6,
 .h0, .h1, .h2, .h3, .h4, .h5,
 .product__title h1 {
   font-family: var(--font-title-family);
-  font-weight: 600;
-  text-transform: lowercase;
+  font-weight: 400;
+  text-transform: capitalize;
   letter-spacing: 0.04em;
-}
-
-/* CSS no tiene un text-transform "solo la primera letra" — se arma con
-   lowercase en todo el texto + ::first-letter en mayúscula. */
-h1::first-letter, h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter,
-.h0::first-letter, .h1::first-letter, .h2::first-letter, .h3::first-letter, .h4::first-letter, .h5::first-letter,
-.product__title h1::first-letter {
-  text-transform: uppercase;
 }
 
 /* Nombre de producto en PDP: sin itálica, la itálica queda reservada
@@ -298,13 +290,10 @@ select,
 .dimayo-discontinued__name {
   font-family: var(--font-title-family);
   font-size: 1.3rem;
-  text-transform: lowercase;
+  font-weight: 400;
+  text-transform: capitalize;
   letter-spacing: 0.03em;
   margin-bottom: 0.6rem;
-}
-
-.dimayo-discontinued__name::first-letter {
-  text-transform: uppercase;
 }
 
 .dimayo-discontinued__note {
