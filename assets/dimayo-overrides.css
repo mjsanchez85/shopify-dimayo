@@ -1086,11 +1086,30 @@ select,
   grid-row: 1;
   justify-self: end;
   padding-top: 0;
+  text-align: right;
+}
+
+/* Redundante a propósito con el justify-self de arriba: .cart-item__quantity  */
+/* comparte la columna 3 (spanea 2/4), así que el ancho de esa columna no      */
+/* siempre queda pegado al precio — esto lo fuerza al borde real de la fila.   */
+.dimayo-cart-page .cart-item__price-wrapper {
+  margin-left: auto;
+  width: fit-content;
 }
 
 .dimayo-cart-page .cart-item__totals.medium-hide.large-up-hide,
 .dimayo-cart-page .cart-item__unit-price {
   display: none;
+}
+
+/* Mismo precio, misma tipografía: el de la línea (arriba) y el del    */
+/* subtotal (abajo) comparten fuente/tamaño para leerse como el mismo   */
+/* dato repetido, no dos estilos distintos.                             */
+.dimayo-cart-page .cart-item__totals.right.small-hide .price,
+.dimayo-cart-page .totals__total-value {
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+  font-size: 1.6rem;
 }
 
 .dimayo-cart-page .dimayo-cart-item-shipping {
