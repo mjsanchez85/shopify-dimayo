@@ -886,7 +886,7 @@ select,
 }
 
 /* ------------------------------------------------------------------ */
-/* 17. PDP — hero: foto acotada a 500×500px, columnas fijas             */
+/* 17. PDP — hero: foto acotada a 550×550px, columnas fijas             */
 /*     (reemplaza el split porcentual de Dawn small/medium/large)       */
 /* ------------------------------------------------------------------ */
 
@@ -914,7 +914,7 @@ select,
   .dimayo-product-hero .product__media-wrapper,
   .dimayo-product-hero.gradient .product--medium:not(.product--no-media) .product__media-wrapper,
   .dimayo-product-hero.gradient .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 50rem;
+    max-width: 55rem;
     width: 100%;
   }
 
@@ -930,12 +930,12 @@ select,
   /* Misma técnica que Grovemade (confirmado vía DevTools: position:static,
      sin sticky/fixed) — ambas columnas miden lo mismo y el contenido se
      centra verticalmente adentro. Acá no hace falta JS de "match height"
-     porque la foto ya está fijada a 50rem por CSS (ver bloque 17). */
+     porque la foto ya está fijada a 55rem por CSS (ver bloque 17). */
   .dimayo-product-hero .product__info-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 50rem;
+    min-height: 55rem;
   }
 }
 
