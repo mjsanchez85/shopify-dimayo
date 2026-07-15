@@ -37,13 +37,14 @@
         "shipping-estimate": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<p class=\"dimayo-shipping-note dimayo-shipping-estimate\">Envío en 24hs dentro de CABA y el resto del país en 2–3 días\n\n\n.</p>"
+            "custom_liquid": "<p class=\"dimayo-shipping-note dimayo-shipping-estimate\">Envío en 24hs dentro de CABA y el resto del país en 2–3 días.</p>"
           }
         },
-        "custom_liquid_HnjJtN": {
-          "type": "custom_liquid",
+        "text_amPBEP": {
+          "type": "text",
           "settings": {
-            "custom_liquid": "<p class=\"ULTIMAS UNIDADES.</p>"
+            "text": "<strong>ULTIMAS UNIDADES EN STOCK.</strong>",
+            "text_style": "subtitle"
           }
         }
       },
@@ -53,7 +54,7 @@
         "price",
         "buy_buttons",
         "shipping-estimate",
-        "custom_liquid_HnjJtN"
+        "text_amPBEP"
       ],
       "settings": {
         "enable_sticky_info": true,
