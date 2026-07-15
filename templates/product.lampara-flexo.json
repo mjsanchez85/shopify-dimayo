@@ -39,6 +39,13 @@
           "settings": {
             "custom_liquid": "<p class=\"dimayo-shipping-note dimayo-shipping-estimate\">Envío en 24hs dentro de CABA y el resto del país en 2–3 días.</p>"
           }
+        },
+        "text_amPBEP": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>ULTIMAS UNIDADES EN STOCK.</strong>",
+            "text_style": "subtitle"
+          }
         }
       },
       "block_order": [
@@ -46,7 +53,8 @@
         "variant_picker",
         "price",
         "buy_buttons",
-        "shipping-estimate"
+        "shipping-estimate",
+        "text_amPBEP"
       ],
       "settings": {
         "enable_sticky_info": true,
