@@ -973,6 +973,36 @@ select,
   .dimayo-product-hero .slider-buttons {
     margin-top: 1.6rem;
   }
+
+  /* Sin miniaturas, hay que reactivar el scroll horizontal nativo del
+     viewer para que las flechas funcionen en desktop. Dawn oculta los
+     slides no activos en este breakpoint para thumbnail/thumbnail_slider
+     (`.product--thumbnail_slider .product__media-item:not(.is-active)
+     {display:none}`, section-main-product.css) porque espera navegación
+     por miniaturas — como las escondemos arriba, sin este override las
+     flechas de SliderComponent (que solo hacen scrollTo, no tocan
+     is-active) no tienen nada para mostrar. Se restaura el mismo
+     comportamiento de overflow-x/scroll-snap que Dawn ya usa en mobile
+     (.slider--mobile) y en sus propias clases .slider--tablet-up/
+     .slider--desktop, que este <ul> nunca recibe porque solo trae
+     slider--mobile (ver snippets/product-media-gallery.liquid). Mayor
+     especificidad (4 clases) para ganarle a la regla de Dawn sin
+     depender del orden de carga de los CSS.                            */
+  .dimayo-product-hero .product__media-list .product__media-item:not(.is-active) {
+    display: block !important;
+  }
+
+  .dimayo-product-hero .product__media-list.slider {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dimayo-product-hero .product__media-list.slider .product__media-item {
+    scroll-snap-align: start;
+  }
 }
 
 /* ------------------------------------------------------------------ */
