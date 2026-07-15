@@ -1231,3 +1231,27 @@ select,
 
 /* Las reglas de .dimayo-cart-suggested__* ya cubren el diseño de       */
 /* tarjetas verticales de forma base — ver más arriba en este archivo.  */
+
+/* ------------------------------------------------------------------ */
+/* 22. Tarjeta de producto — título en DIN 2014, no Playfair Display.   */
+/*     .card__heading es un <h3> (snippets/card-product.liquid), así    */
+/*     que hereda la regla global de títulos (--font-title-family,      */
+/*     capitalize). Se pisa solo acá, con más especificidad, para que   */
+/*     el resto de los H1–H6 del sitio no se toquen. Mismo truco de     */
+/*     "solo la primera letra en mayúscula" que se usó antes para       */
+/*     títulos: CSS no tiene un text-transform así, se arma con         */
+/*     lowercase + ::first-letter en mayúscula.                         */
+/* ------------------------------------------------------------------ */
+
+.card__heading,
+.card__heading a {
+  font-family: var(--font-body-family);
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: normal;
+}
+
+.card__heading::first-letter,
+.card__heading a::first-letter {
+  text-transform: uppercase;
+}
