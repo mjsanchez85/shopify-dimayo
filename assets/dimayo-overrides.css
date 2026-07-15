@@ -747,8 +747,15 @@ select,
 .dimayo-product-hero .product-form__input--swatch,
 .dimayo-product-hero .price,
 .dimayo-product-hero .installment,
-.dimayo-product-hero .product-form {
+.dimayo-product-hero .product-form,
+.dimayo-product-hero .product__text {
   text-align: center;
+}
+
+/* .product__inventory es flex (ícono + texto, ver section-main-product.css)
+   así que text-align no alcanza — necesita justify-content. */
+.dimayo-product-hero .product__inventory {
+  justify-content: center;
 }
 
 .dimayo-product-hero .product__title {
