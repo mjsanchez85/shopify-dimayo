@@ -886,7 +886,7 @@ select,
 }
 
 /* ------------------------------------------------------------------ */
-/* 17. PDP — hero: foto acotada a 650×650px, columnas fijas             */
+/* 17. PDP — hero: foto acotada a 500×500px, columnas fijas             */
 /*     (reemplaza el split porcentual de Dawn small/medium/large)       */
 /* ------------------------------------------------------------------ */
 
@@ -901,7 +901,12 @@ select,
   object-fit: cover;
 }
 
-@media screen and (min-width: 990px) {
+/* Arranca en 750px (breakpoint real de Dawn para el split a 2 columnas
+   vía .grid--2-col-tablet, ver base.css) y no en 990px: entre 750 y 989
+   el <product-info> ya renderiza en 2 columnas pero sin este tope, la
+   foto queda sin acotar (ancho fluido de Dawn) y el panel de compra se
+   desalinea del centrado vertical de abajo. */
+@media screen and (min-width: 750px) {
   .dimayo-product-hero .product.grid {
     column-gap: 6rem;
   }
@@ -909,7 +914,7 @@ select,
   .dimayo-product-hero .product__media-wrapper,
   .dimayo-product-hero.gradient .product--medium:not(.product--no-media) .product__media-wrapper,
   .dimayo-product-hero.gradient .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 65rem;
+    max-width: 50rem;
     width: 100%;
   }
 
@@ -925,12 +930,12 @@ select,
   /* Misma técnica que Grovemade (confirmado vía DevTools: position:static,
      sin sticky/fixed) — ambas columnas miden lo mismo y el contenido se
      centra verticalmente adentro. Acá no hace falta JS de "match height"
-     porque la foto ya está fijada a 65rem por CSS (ver bloque 17). */
+     porque la foto ya está fijada a 50rem por CSS (ver bloque 17). */
   .dimayo-product-hero .product__info-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 65rem;
+    min-height: 50rem;
   }
 }
 
