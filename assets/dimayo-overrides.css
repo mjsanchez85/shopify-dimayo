@@ -1007,12 +1007,21 @@ select,
   .dimayo-product-hero .product__media-list.slider {
     flex-wrap: nowrap;
     overflow-x: auto;
+    column-gap: 0;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
 
+  /* flex:0 0 100% en vez de depender de que "width:100%" (regla de Dawn,
+     section-main-product.css) se traduzca solo a flex-basis: con el
+     column-gap de .grid (base.css) de por medio, algunos motores dejan
+     cada slide más angosto que el contenedor y el paso de una imagen a
+     la siguiente termina mostrando dos imágenes a mitad de tamaño en vez
+     de una completa — justo el bug reportado al navegar la galería. */
   .dimayo-product-hero .product__media-list.slider .product__media-item {
+    flex: 0 0 100%;
+    max-width: 100%;
     scroll-snap-align: start;
   }
 }
