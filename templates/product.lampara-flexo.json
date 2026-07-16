@@ -165,6 +165,19 @@
         "padding_bottom": 40
       }
     },
+    "dimayo_split_T4X9wt": {
+      "type": "dimayo-split",
+      "settings": {
+        "layout": "image_first",
+        "image": "shopify://shop_images/lamp_002.png",
+        "image_placeholder": "",
+        "heading": "Una luz distinta para cada momento del día",
+        "text": "<p>No toda tarea necesita la misma luz, y esta lámpara lo entiende. Con 4 temperaturas de color (3000K, 4000K, 5000K y 6000K) elegís exactamente el tono que tu ojo necesita en cada momento:</p><p>Luz cálida (3000K) para las noches de lectura o cuando querés bajar el ritmo sin perder claridad. Luz neutra (4000K-5000K) para el día a día de oficina, ideal para largas jornadas frente a la pantalla sin fatiga. Luz fría (6000K) para trabajos de precisión, diseño o detalle, donde necesitás máxima nitidez y contraste.</p><p><strong>Ajustás el brillo, no forzás la vista</strong></p><p>Con 6 niveles de brillo y regulación continua (sin saltos ni parpadeos), controlás la intensidad exacta que tu espacio necesita: desde una luz suave para acompañar sin encandilar, hasta brillo máximo para las tareas que exigen full atención.</p><p>¿Por qué importa esto? Porque una luz fija, siempre igual, obliga a tus ojos a adaptarse a ella. Acá es al revés: la luz se adapta a vos, a la hora del día, al cansancio que tenés y a lo que estás haciendo. Menos esfuerzo visual, más horas cómodas frente al monitor.</p>",
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 40
+      }
+    },
     "full-banner": {
       "type": "dimayo-collage",
       "blocks": {
@@ -256,6 +269,7 @@
     "collage",
     "storage-feature",
     "dimayo_split_apxLMj",
+    "dimayo_split_T4X9wt",
     "full-banner",
     "tech-specs",
     "suggested"
