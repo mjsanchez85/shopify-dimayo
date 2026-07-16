@@ -227,7 +227,7 @@
           "type": "spec",
           "settings": {
             "heading": "Voltaje y Consumo",
-            "content": "<ul><li>Potencia: 40W</li><li>AC 110-240V 50/60Hz</li><li>Enchufe: Transformador </li><li>Entrada 220V Salida 20v - 1.5A <br/></li></ul>"
+            "content": "<ul><li>Potencia: 40W</li><li>AC 110-240V 50/60Hz</li><li>Transformador con conector Plug hueco</li><li>Entrada 220V Salida 20v - 1.5A <br/></li></ul>"
           }
         }
       },
