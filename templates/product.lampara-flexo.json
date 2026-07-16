@@ -148,6 +148,7 @@
         "cell-2",
         "cell-3"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 40,
