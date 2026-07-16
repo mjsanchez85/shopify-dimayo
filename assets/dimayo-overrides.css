@@ -568,7 +568,7 @@ select,
 .dimayo-collage--carousel .dimayo-collage__cell {
   flex: 0 0 78%;
   width: auto;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 @media screen and (min-width: 750px) {
