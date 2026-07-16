@@ -98,8 +98,8 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 24,
+        "padding_bottom": 0
       }
     },
     "collage": {
@@ -148,7 +148,7 @@
         "heading": "Perfil delgado, abrazadera resistente y cuello flexible",
         "text": "<p>La abrazadera de montaje de acero de la lámpara Cisne Flex, con su poste de aluminio extruido y su cuello reforzado con acero, ofrece una base sólida en un espacio reducido. <br/><br/>Gracias a los materiales de primera calidad, su perfil delgado soporta con facilidad el voluminoso cabezal LED, lo que garantiza que tus proyectos siempre se vean bajo la mejor luz.<br/><br/>La base de sujeción resistente se adapta a escritorios de entre 2cm a 7.6cm de grosor y se mantiene firmemente en su lugar mientras se ajusta la lámpara.<br/><br/>Recubierto de caucho de silicona, el cuello reforzado con acero de la lámpara es extremadamente flexible, lo que permite colocar el cabezal de la lámpara en cualquier ángulo.</p>",
         "color_scheme": "scheme-1",
-        "padding_top": 0,
+        "padding_top": 24,
         "padding_bottom": 40
       }
     },
@@ -161,7 +161,7 @@
         "heading": "Manejo simple, control total",
         "text": "<p>Nada de complicarte con instrucciones ni botones escondidos. Esta lámpara se maneja con un panel táctil ubicado directamente sobre el brazo: apenas apoyas el dedo y ajustas brillo e intensidad de luz al instante, sin levantarte del asiento ni interrumpir lo que estás haciendo.</p><p>¿No querés ni estirar la mano? Viene con control remoto incluido, así que podés prender, apagar y regular la luz desde donde estés sentado, incluso a distancia del escritorio.</p><p>Dos formas de controlarla, cero curva de aprendizaje: tocás y ajustás, o usás el remoto y listo. Pensada para que la luz se adapte a vos, no al revés.</p>",
         "color_scheme": "scheme-1",
-        "padding_top": 96,
+        "padding_top": 24,
         "padding_bottom": 40
       }
     },
@@ -174,7 +174,7 @@
         "heading": "Una luz distinta para cada momento del día",
         "text": "<p>No toda tarea necesita la misma luz, y esta lámpara lo entiende. Con 4 temperaturas de color (3000K, 4000K, 5000K y 6000K) elegís exactamente el tono que tu ojo necesita en cada momento:</p><p>Luz cálida (3000K) para las noches de lectura o cuando querés bajar el ritmo sin perder claridad. Luz neutra (4000K-5000K) para el día a día de oficina, ideal para largas jornadas frente a la pantalla sin fatiga. Luz fría (6000K) para trabajos de precisión, diseño o detalle, donde necesitás máxima nitidez y contraste.</p><p><strong>Ajustás el brillo, no forzás la vista</strong></p><p>Con 6 niveles de brillo y regulación continua (sin saltos ni parpadeos), controlás la intensidad exacta que tu espacio necesita: desde una luz suave para acompañar sin encandilar, hasta brillo máximo para las tareas que exigen full atención.</p><p>¿Por qué importa esto? Porque una luz fija, siempre igual, obliga a tus ojos a adaptarse a ella. Acá es al revés: la luz se adapta a vos, a la hora del día, al cansancio que tenés y a lo que estás haciendo. Menos esfuerzo visual, más horas cómodas frente al monitor.</p>",
         "color_scheme": "scheme-1",
-        "padding_top": 96,
+        "padding_top": 24,
         "padding_bottom": 40
       }
     },
