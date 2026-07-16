@@ -145,7 +145,7 @@
         "image": "shopify://shop_images/lamp_003.png",
         "image_placeholder": "Detalle — almacenamiento inferior",
         "heading": "Perfil delgado, abrazadera resistente y cuello flexible",
-        "text": "<p><br/>La abrazadera de montaje de acero de la lámpara Sliding Flex, con su poste de aluminio extruido y su cuello reforzado con acero, ofrece una base sólida en un espacio reducido. <br/><br/>Gracias a los materiales de primera calidad, su perfil delgado soporta con facilidad el voluminoso cabezal LED, lo que garantiza que tus proyectos siempre se vean bajo la mejor luz.<br/><br/>La base de sujeción resistente se adapta a escritorios de entre 0.75\" y 3.5\" de grosor y se mantiene firmemente en su lugar mientras se ajusta la lámpara.<br/><br/>Recubierto de caucho de silicona, el cuello de 17.5\" reforzado con acero de la lámpara es extremadamente flexible, lo que permite colocar el cabezal de la lámpara en cualquier ángulo.</p>",
+        "text": "<p>La abrazadera de montaje de acero de la lámpara Cisne Flex, con su poste de aluminio extruido y su cuello reforzado con acero, ofrece una base sólida en un espacio reducido. <br/><br/>Gracias a los materiales de primera calidad, su perfil delgado soporta con facilidad el voluminoso cabezal LED, lo que garantiza que tus proyectos siempre se vean bajo la mejor luz.<br/><br/>La base de sujeción resistente se adapta a escritorios de entre 0.75\" y 3.5\" de grosor y se mantiene firmemente en su lugar mientras se ajusta la lámpara.<br/><br/>Recubierto de caucho de silicona, el cuello de 17.5\" reforzado con acero de la lámpara es extremadamente flexible, lo que permite colocar el cabezal de la lámpara en cualquier ángulo.</p>",
         "color_scheme": "scheme-1",
         "padding_top": 96,
         "padding_bottom": 40
@@ -177,29 +177,37 @@
         "spec-origen": {
           "type": "spec",
           "settings": {
-            "heading": "Origen",
-            "content": "<p>Diseño y fabricación por DIMAYO en Buenos Aires, Argentina.</p>"
+            "heading": "Detalles de iluminacion",
+            "content": "<ul><li>Flujo luminoso: 2400 lm</li><li>Eficacia luminosa: 85 lm/W</li><li>Voltaje de entrada: AC 165-265V</li><li>Fuente de luz: LED</li><li>Temperatura de color (CCT): 3000K / 4000K / 5000K / 6000K</li><li>Índice de reproducción cromática (Ra/CRI): 85</li><li>Modo de control: táctil y control remoto</li><li>Regulable (dimmer): sí</li><li>Vida útil: 50.000 horas</li><li>Temperatura de funcionamiento: -20°C a 40°C</li></ul>"
           }
         },
         "spec-material": {
           "type": "spec",
           "settings": {
             "heading": "Material",
-            "content": "<p>Materiales nobles, detallados por producto en esta sección.</p>"
+            "content": "<ul><li>Cuerpo de la lampara: Aluminio</li><li>Sporte de sujecion: Metal</li><li>Cuello Flexible: Metal con Silcona</li><li>Base: ABS plastico.</li><li>Color: Negro y Blanco</li></ul>"
           }
         },
         "spec-info": {
           "type": "spec",
           "settings": {
-            "heading": "Información",
-            "content": "<p>Terminado a mano. Compatible con configuraciones de escritorio estándar.</p>"
+            "heading": "Medidas y peso",
+            "content": "<ul><li>Peso: 2.5kg</li><li>Tamaño de la caja de embalaje: 96cm</li><li>Largo x 12cm Ancho x 13cm Alto.</li><li>Tamaño del producto instalado: 80cm</li><li>Ancho x 74cm de Alto </li><li>Morsa de sujeción: 7.5cm Ancho y 10cm Alto </li></ul>"
+          }
+        },
+        "spec_yiTh9E": {
+          "type": "spec",
+          "settings": {
+            "heading": "Voltaje y Consumo",
+            "content": "<ul><li>Potencia: 40W</li><li>AC 110-240V</li><li>Transfomador: Entrada 220V Salida 20v - 1.5A <br/></li></ul>"
           }
         }
       },
       "block_order": [
         "spec-origen",
         "spec-material",
-        "spec-info"
+        "spec-info",
+        "spec_yiTh9E"
       ],
       "settings": {
         "heading": "Especificaciones Técnicas",
