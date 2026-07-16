@@ -1,9 +1,12 @@
 {% comment %}
-  DIMAYO — Collage de fotos de producto (PDP). Sirve tanto para el
-  collage de 1:2:1 columnas (3 bloques) como para un banner full-width
-  (1 bloque) reusando el mismo componente .dimayo-collage.
-  Sin gradientes decorativos: el placeholder sin foto es un rectángulo
-  Panel liso con el nombre del bloque en Bricolage Grotesque (PRD 2.4).
+  DIMAYO — Collage de fotos de producto (PDP). Con 1 sola imagen es un
+  banner full-width (21:9). Con 2 o más, es un carrusel: mismo patrón
+  <slider-component> + SliderComponent (assets/global.js) que ya usa la
+  galería principal del producto (snippets/product-media-gallery.liquid)
+  — flechas y contador nativos de Dawn, click o swipe en mobile, sin JS
+  propio. Sin gradientes decorativos: el placeholder sin foto es un
+  rectángulo Panel liso con el nombre del bloque en Bricolage Grotesque
+  (PRD 2.4).
 {% endcomment %}
 
 {%- style -%}
@@ -20,10 +23,68 @@
   }
 {%- endstyle -%}
 
+{%- liquid
+  assign cell_blocks = section.blocks | where: 'type', 'cell'
+-%}
+
 <div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-  <div class="dimayo-collage dimayo-collage--{{ section.blocks.size }}">
-    {%- for block in section.blocks -%}
-      {%- if block.type == 'cell' -%}
+  {%- if cell_blocks.size > 1 -%}
+    <slider-component id="CollageSlider-{{ section.id }}" class="dimayo-collage-slider">
+      <ul
+        id="Slider-Collage-{{ section.id }}"
+        class="dimayo-collage dimayo-collage--carousel slider slider--mobile"
+        role="list"
+      >
+        {%- for block in cell_blocks -%}
+          <li
+            id="Slide-Collage-{{ section.id }}-{{ forloop.index }}"
+            class="dimayo-collage__cell slider__slide"
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 1500
+                | image_tag: widths: '375, 750, 1100, 1500', sizes: '(min-width: 750px) 700px, 100vw'
+              }}
+            {%- else -%}
+              <div class="dimayo-collage__placeholder">{{ block.settings.caption | default: 'Imagen del producto' }}</div>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+      <div class="slider-buttons dimayo-collage__buttons">
+        <button
+          type="button"
+          class="slider-button slider-button--prev"
+          name="previous"
+          aria-label="{{ 'general.slider.previous_slide' | t }}"
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </span>
+        </button>
+        <div class="slider-counter caption">
+          <span class="slider-counter--current">1</span>
+          <span aria-hidden="true"> / </span>
+          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+          <span class="slider-counter--total">{{ cell_blocks.size }}</span>
+        </div>
+        <button
+          type="button"
+          class="slider-button slider-button--next"
+          name="next"
+          aria-label="{{ 'general.slider.next_slide' | t }}"
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </span>
+        </button>
+      </div>
+    </slider-component>
+  {%- else -%}
+    <div class="dimayo-collage dimayo-collage--1">
+      {%- for block in cell_blocks -%}
         <div class="dimayo-collage__cell" {{ block.shopify_attributes }}>
           {%- if block.settings.image != blank -%}
             {{
@@ -35,9 +96,9 @@
             <div class="dimayo-collage__placeholder">{{ block.settings.caption | default: 'Imagen del producto' }}</div>
           {%- endif -%}
         </div>
-      {%- endif -%}
-    {%- endfor -%}
-  </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
@@ -84,7 +145,7 @@
     {
       "type": "cell",
       "name": "Imagen",
-      "limit": 3,
+      "limit": 10,
       "settings": [
         {
           "type": "image_picker",
