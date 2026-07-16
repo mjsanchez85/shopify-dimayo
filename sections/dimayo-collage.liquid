@@ -1,13 +1,14 @@
 {% comment %}
   DIMAYO — Collage de fotos de producto (PDP). Con 1 sola imagen es un
-  banner full-width (21:9). Con 2 o más, es un carrusel: mismo patrón
-  <slider-component> + SliderComponent (assets/global.js) que ya usa la
-  galería principal del producto (snippets/product-media-gallery.liquid)
-  — flechas y contador nativos de Dawn, click o swipe en mobile, sin JS
-  propio. Sin gradientes decorativos: el placeholder sin foto es un
-  rectángulo Panel liso con el nombre del bloque en Bricolage Grotesque
-  (PRD 2.4).
+  banner full-width (21:9). Con 2 o más, es un carrusel tipo "peek" que
+  se desliza con touch/swipe (nativo del overflow-x) y también con click
+  + arrastre de mouse en desktop, vía dimayo-collage-drag.js — sin
+  flechas, a pedido explícito. Sin gradientes decorativos: el
+  placeholder sin foto es un rectángulo Panel liso con el nombre del
+  bloque en Bricolage Grotesque (PRD 2.4).
 {% endcomment %}
+
+<script src="{{ 'dimayo-collage-drag.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -29,59 +30,26 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- if cell_blocks.size > 1 -%}
-    <slider-component id="CollageSlider-{{ section.id }}" class="dimayo-collage-slider">
-      <ul
-        id="Slider-Collage-{{ section.id }}"
-        class="dimayo-collage dimayo-collage--carousel slider slider--mobile"
-        role="list"
-      >
-        {%- for block in cell_blocks -%}
-          <li
-            id="Slide-Collage-{{ section.id }}-{{ forloop.index }}"
-            class="dimayo-collage__cell slider__slide"
-            {{ block.shopify_attributes }}
-          >
-            {%- if block.settings.image != blank -%}
-              {{
-                block.settings.image
-                | image_url: width: 1500
-                | image_tag: widths: '375, 750, 1100, 1500', sizes: '(min-width: 990px) 31vw, (min-width: 750px) 45vw, 78vw'
-              }}
-            {%- else -%}
-              <div class="dimayo-collage__placeholder">{{ block.settings.caption | default: 'Imagen del producto' }}</div>
-            {%- endif -%}
-          </li>
-        {%- endfor -%}
-      </ul>
-      <div class="slider-buttons dimayo-collage__buttons">
-        <button
-          type="button"
-          class="slider-button slider-button--prev"
-          name="previous"
-          aria-label="{{ 'general.slider.previous_slide' | t }}"
-        >
-          <span class="svg-wrapper">
-            {{- 'icon-caret.svg' | inline_asset_content -}}
-          </span>
-        </button>
-        <div class="slider-counter caption">
-          <span class="slider-counter--current">1</span>
-          <span aria-hidden="true"> / </span>
-          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-          <span class="slider-counter--total">{{ cell_blocks.size }}</span>
+    <div
+      id="CollageSlider-{{ section.id }}"
+      class="dimayo-collage dimayo-collage--carousel"
+      role="list"
+      aria-label="{{ 'general.slider.name' | t }}"
+    >
+      {%- for block in cell_blocks -%}
+        <div class="dimayo-collage__cell" role="listitem" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            {{
+              block.settings.image
+              | image_url: width: 1500
+              | image_tag: widths: '375, 750, 1100, 1500', sizes: '(min-width: 990px) 31vw, (min-width: 750px) 45vw, 78vw', draggable: false
+            }}
+          {%- else -%}
+            <div class="dimayo-collage__placeholder">{{ block.settings.caption | default: 'Imagen del producto' }}</div>
+          {%- endif -%}
         </div>
-        <button
-          type="button"
-          class="slider-button slider-button--next"
-          name="next"
-          aria-label="{{ 'general.slider.next_slide' | t }}"
-        >
-          <span class="svg-wrapper">
-            {{- 'icon-caret.svg' | inline_asset_content -}}
-          </span>
-        </button>
-      </div>
-    </slider-component>
+      {%- endfor -%}
+    </div>
   {%- else -%}
     <div class="dimayo-collage dimayo-collage--1">
       {%- for block in cell_blocks -%}
