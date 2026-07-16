@@ -98,8 +98,8 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 96,
-        "padding_bottom": 40
+        "padding_top": 64,
+        "padding_bottom": 0
       }
     },
     "collage": {
@@ -144,10 +144,36 @@
         "layout": "image_first",
         "image": "shopify://shop_images/lamp_003.png",
         "image_placeholder": "Detalle — almacenamiento inferior",
-        "heading": "Guardala",
-        "text": "<p>Un compartimento inferior en fieltro de lana organiza tu espacio: un sector más chico ideal para una bandeja de escritorio, espacio amplio para guardar desde objetos sueltos hasta tu laptop, y una curva suave en la parte trasera para el cableado. Sostiene lo que necesitás sin que nada se caiga.</p>",
+        "heading": "Perfil delgado, abrazadera resistente y cuello flexible",
+        "text": "<p>La abrazadera de montaje de acero de la lámpara Cisne Flex, con su poste de aluminio extruido y su cuello reforzado con acero, ofrece una base sólida en un espacio reducido. <br/><br/>Gracias a los materiales de primera calidad, su perfil delgado soporta con facilidad el voluminoso cabezal LED, lo que garantiza que tus proyectos siempre se vean bajo la mejor luz.<br/><br/>La base de sujeción resistente se adapta a escritorios de entre 2cm a 7.6cm de grosor y se mantiene firmemente en su lugar mientras se ajusta la lámpara.<br/><br/>Recubierto de caucho de silicona, el cuello reforzado con acero de la lámpara es extremadamente flexible, lo que permite colocar el cabezal de la lámpara en cualquier ángulo.</p>",
         "color_scheme": "scheme-1",
-        "padding_top": 96,
+        "padding_top": 24,
+        "padding_bottom": 40
+      }
+    },
+    "dimayo_split_apxLMj": {
+      "type": "dimayo-split",
+      "settings": {
+        "layout": "text_first",
+        "image": "shopify://shop_images/lamp_004.png",
+        "image_placeholder": "",
+        "heading": "Manejo simple, control total",
+        "text": "<p>Nada de complicarte con instrucciones ni botones escondidos. Esta lámpara se maneja con un panel táctil ubicado directamente sobre el brazo: apenas apoyas el dedo y ajustas brillo e intensidad de luz al instante, sin levantarte del asiento ni interrumpir lo que estás haciendo.</p><p>¿No querés ni estirar la mano? Viene con control remoto incluido, así que podés prender, apagar y regular la luz desde donde estés sentado, incluso a distancia del escritorio.</p><p>Dos formas de controlarla, cero curva de aprendizaje: tocás y ajustás, o usás el remoto y listo. Pensada para que la luz se adapte a vos, no al revés.</p>",
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 40
+      }
+    },
+    "dimayo_split_T4X9wt": {
+      "type": "dimayo-split",
+      "settings": {
+        "layout": "image_first",
+        "image": "shopify://shop_images/lamp_002.png",
+        "image_placeholder": "",
+        "heading": "Una luz distinta para cada momento del día",
+        "text": "<p>No toda tarea necesita la misma luz, y esta lámpara lo entiende. Con 4 temperaturas de color (3000K, 4000K, 5000K y 6000K) elegís exactamente el tono que tu ojo necesita en cada momento:</p><p>Luz cálida (3000K) para las noches de lectura o cuando querés bajar el ritmo sin perder claridad. Luz neutra (4000K-5000K) para el día a día de oficina, ideal para largas jornadas frente a la pantalla sin fatiga. Luz fría (6000K) para trabajos de precisión, diseño o detalle, donde necesitás máxima nitidez y contraste.</p><p><strong>Ajustás el brillo, no forzás la vista</strong></p><p>Con 6 niveles de brillo y regulación continua (sin saltos ni parpadeos), controlás la intensidad exacta que tu espacio necesita: desde una luz suave para acompañar sin encandilar, hasta brillo máximo para las tareas que exigen full atención.</p><p>¿Por qué importa esto? Porque una luz fija, siempre igual, obliga a tus ojos a adaptarse a ella. Acá es al revés: la luz se adapta a vos, a la hora del día, al cansancio que tenés y a lo que estás haciendo. Menos esfuerzo visual, más horas cómodas frente al monitor.</p>",
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
         "padding_bottom": 40
       }
     },
@@ -165,6 +191,7 @@
       "block_order": [
         "cell-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 0,
@@ -177,29 +204,37 @@
         "spec-origen": {
           "type": "spec",
           "settings": {
-            "heading": "Origen",
-            "content": "<p>Diseño y fabricación por DIMAYO en Buenos Aires, Argentina.</p>"
+            "heading": "Detalles de iluminacion",
+            "content": "<ul><li>Flujo luminoso: 2400 lm</li><li>Eficacia luminosa: 85 lm/W</li><li>Voltaje de entrada: AC 165-265V</li><li>Fuente de luz: LED</li><li>Temperatura de color (CCT): 3000K / 4000K / 5000K / 6000K</li><li>Índice de reproducción cromática (Ra/CRI): 85</li><li>Modo de control: táctil y control remoto</li><li>Regulable (dimmer): sí</li><li>Vida útil: 50.000 horas</li><li>Temperatura de funcionamiento: -20°C a 40°C</li></ul>"
           }
         },
         "spec-material": {
           "type": "spec",
           "settings": {
             "heading": "Material",
-            "content": "<p>Materiales nobles, detallados por producto en esta sección.</p>"
+            "content": "<ul><li>Cuerpo de la lampara: Aluminio</li><li>Sporte de sujecion: Metal</li><li>Cuello Flexible: Metal con Silcona</li><li>Base: ABS plastico.</li><li>Color: Negro y Blanco</li></ul>"
           }
         },
         "spec-info": {
           "type": "spec",
           "settings": {
-            "heading": "Información",
-            "content": "<p>Terminado a mano. Compatible con configuraciones de escritorio estándar.</p>"
+            "heading": "Medidas y peso",
+            "content": "<ul><li>Peso: 2.5kg</li><li>Tamaño de la caja de embalaje: 96cm</li><li>Largo x 12cm Ancho x 13cm Alto.</li><li>Tamaño del producto instalado: 80cm</li><li>Ancho x 74cm de Alto </li><li>Morsa de sujeción: 7.5cm Ancho y 10cm Alto </li></ul>"
+          }
+        },
+        "spec_yiTh9E": {
+          "type": "spec",
+          "settings": {
+            "heading": "Voltaje y Consumo",
+            "content": "<ul><li>Potencia: 40W</li><li>AC 110-240V 50/60Hz</li><li>Transformador con conector Plug hueco</li><li>Entrada 220V Salida 20v - 1.5A <br/></li></ul>"
           }
         }
       },
       "block_order": [
         "spec-origen",
         "spec-material",
-        "spec-info"
+        "spec-info",
+        "spec_yiTh9E"
       ],
       "settings": {
         "heading": "Especificaciones Técnicas",
@@ -232,6 +267,8 @@
     "feature-intro",
     "collage",
     "storage-feature",
+    "dimayo_split_apxLMj",
+    "dimayo_split_T4X9wt",
     "full-banner",
     "tech-specs",
     "suggested"
