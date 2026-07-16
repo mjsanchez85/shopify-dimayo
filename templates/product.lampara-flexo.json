@@ -105,6 +105,20 @@
     "collage": {
       "type": "dimayo-collage",
       "blocks": {
+        "cell_UQfMxV": {
+          "type": "cell",
+          "settings": {
+            "image": "shopify://shop_images/lamp_005_36aa8208-ab76-40bd-aefa-ab387b1e6a0d.png",
+            "caption": "Imagen del producto"
+          }
+        },
+        "cell_4JjCLi": {
+          "type": "cell",
+          "settings": {
+            "image": "shopify://shop_images/lamp_007.png",
+            "caption": "Imagen del producto"
+          }
+        },
         "cell-1": {
           "type": "cell",
           "settings": {
@@ -128,6 +142,8 @@
         }
       },
       "block_order": [
+        "cell_UQfMxV",
+        "cell_4JjCLi",
         "cell-1",
         "cell-2",
         "cell-3"
