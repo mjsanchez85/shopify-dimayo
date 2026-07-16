@@ -540,7 +540,7 @@ select,
 }
 
 .dimayo-collage--3 {
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .dimayo-collage--1 {
@@ -549,13 +549,20 @@ select,
 
 .dimayo-collage__cell {
   position: relative;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
+  max-width: 700px;
+  max-height: 700px;
+  width: 100%;
   background: var(--dimayo-panel);
   overflow: hidden;
 }
 
+/* La variante de 1 sola celda es un banner ancho (21:9), no una cuadrícula
+   pareja — no hereda el tope de 700px pensado para las 3 columnas. */
 .dimayo-collage--1 .dimayo-collage__cell {
   aspect-ratio: 21 / 9;
+  max-width: none;
+  max-height: none;
 }
 
 .dimayo-collage__cell img {
