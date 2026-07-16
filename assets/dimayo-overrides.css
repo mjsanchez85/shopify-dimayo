@@ -543,30 +543,38 @@ select,
   grid-template-columns: 1fr;
 }
 
-/* Collage con 2+ imágenes: carrusel, no grilla fija — mismo patrón de
-   scroll horizontal + flechas que ya se usa (y se corrigió) en la
-   galería principal del producto, ver sección 19 más abajo. El <ul>
-   solo trae slider--mobile (igual que Dawn), así que sin este bloque
-   las flechas quedarían ocultas en desktop
+/* Collage con 2+ imágenes: carrusel tipo "peek" — varias celdas visibles
+   una al lado de la otra, deslizable (drag/swipe nativo del overflow-x,
+   igual en mobile y desktop) y con flechas para click. El <ul> solo trae
+   slider--mobile (igual que Dawn), así que sin forzar .slider-buttons
+   visible las flechas quedarían ocultas en desktop
    (.slider--mobile + .slider-buttons{display:none}, component-slider.css). */
-.dimayo-collage-slider {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 .dimayo-collage--carousel {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  column-gap: 0;
+  gap: 1.6rem;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
 .dimayo-collage--carousel .dimayo-collage__cell {
-  flex: 0 0 100%;
+  flex: 0 0 78%;
+  width: auto;
   scroll-snap-align: start;
+}
+
+@media screen and (min-width: 750px) {
+  .dimayo-collage--carousel .dimayo-collage__cell {
+    flex: 0 0 45%;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .dimayo-collage--carousel .dimayo-collage__cell {
+    flex: 0 0 31%;
+  }
 }
 
 .dimayo-collage-slider .slider-buttons {
