@@ -98,8 +98,8 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 96,
-        "padding_bottom": 40
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "collage": {
@@ -132,6 +132,7 @@
         "cell-2",
         "cell-3"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 0,
@@ -146,6 +147,19 @@
         "image_placeholder": "Detalle — almacenamiento inferior",
         "heading": "Perfil delgado, abrazadera resistente y cuello flexible",
         "text": "<p>La abrazadera de montaje de acero de la lámpara Cisne Flex, con su poste de aluminio extruido y su cuello reforzado con acero, ofrece una base sólida en un espacio reducido. <br/><br/>Gracias a los materiales de primera calidad, su perfil delgado soporta con facilidad el voluminoso cabezal LED, lo que garantiza que tus proyectos siempre se vean bajo la mejor luz.<br/><br/>La base de sujeción resistente se adapta a escritorios de entre 2cm a 7.6cm de grosor y se mantiene firmemente en su lugar mientras se ajusta la lámpara.<br/><br/>Recubierto de caucho de silicona, el cuello reforzado con acero de la lámpara es extremadamente flexible, lo que permite colocar el cabezal de la lámpara en cualquier ángulo.</p>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "dimayo_split_apxLMj": {
+      "type": "dimayo-split",
+      "settings": {
+        "layout": "text_first",
+        "image": "shopify://shop_images/lamp_004.png",
+        "image_placeholder": "",
+        "heading": "Manejo simple, control total",
+        "text": "<p>Nada de complicarte con instrucciones ni botones escondidos. Esta lámpara se maneja con un panel táctil ubicado directamente sobre el brazo: apenas apoyas el dedo y ajustas brillo e intensidad de luz al instante, sin levantarte del asiento ni interrumpir lo que estás haciendo.</p><p>¿No querés ni estirar la mano? Viene con control remoto incluido, así que podés prender, apagar y regular la luz desde donde estés sentado, incluso a distancia del escritorio.</p><p>Dos formas de controlarla, cero curva de aprendizaje: tocás y ajustás, o usás el remoto y listo. Pensada para que la luz se adapte a vos, no al revés.</p>",
         "color_scheme": "scheme-1",
         "padding_top": 96,
         "padding_bottom": 40
@@ -165,6 +179,7 @@
       "block_order": [
         "cell-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 0,
@@ -240,6 +255,7 @@
     "feature-intro",
     "collage",
     "storage-feature",
+    "dimayo_split_apxLMj",
     "full-banner",
     "tech-specs",
     "suggested"
