@@ -99,6 +99,7 @@
         },
         "statement": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Elegimos materiales que se reparan, no que se reemplazan. Cada objeto que vendemos reemplazó a diez que descartamos — eso es el trabajo.",
             "heading_size": "h2"
