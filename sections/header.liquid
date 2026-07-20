@@ -101,6 +101,9 @@
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+{%- if section.settings.menu_type_desktop == 'mega' or section.settings.menu_type_desktop == 'dropdown' -%}
+  <script src="{{ 'dimayo-header-menu-hover.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 
 {%- liquid
   for block in section.blocks
