@@ -90,6 +90,7 @@
       "blocks": {
         "eyebrow": {
           "type": "caption",
+          "disabled": true,
           "settings": {
             "caption": "Nuestra filosofía",
             "text_style": "caption-with-letter-spacing",
@@ -98,6 +99,7 @@
         },
         "statement": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Elegimos materiales que se reparan, no que se reemplazan. Cada objeto que vendemos reemplazó a diez que descartamos — eso es el trabajo.",
             "heading_size": "h2"
@@ -154,14 +156,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "El oficio de trabajar bien",
+            "heading": "Newsletter",
             "heading_size": "h2"
           }
         },
         "paragraph": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Te avisamos cuando algo nuevo entra a la selección — y cuando algo sale.</p>"
+            "text": "<p><em>Suscríbete a nuestro boletín informativo para enterarte de los nuevos lanzamientos de productos</em></p>"
           }
         },
         "form": {
