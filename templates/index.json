@@ -44,7 +44,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/Banner_Home_Gemini.png",
+        "image": "shopify://shop_images/Detalle_lamp_black_001.png",
         "image_overlay_opacity": 20,
         "image_height": "large",
         "image_behavior": "none",
@@ -59,6 +59,7 @@
     },
     "seleccion": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "all",
         "products_to_show": 3,
@@ -110,6 +111,7 @@
         "eyebrow",
         "statement"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -176,6 +178,7 @@
         "paragraph",
         "form"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "full_width": true,
