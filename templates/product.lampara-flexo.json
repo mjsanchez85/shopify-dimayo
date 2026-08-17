@@ -27,10 +27,6 @@
           "type": "price",
           "settings": {}
         },
-        "judge_me_reviews_all_reviews_text_MnA4Uz": {
-          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -56,7 +52,6 @@
         "title",
         "variant_picker",
         "price",
-        "judge_me_reviews_all_reviews_text_MnA4Uz",
         "buy_buttons",
         "shipping-estimate",
         "text_amPBEP"
