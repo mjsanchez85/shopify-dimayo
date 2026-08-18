@@ -46,6 +46,7 @@
         },
         "text_amPBEP": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<strong>ULTIMAS UNIDADES EN STOCK.</strong>",
             "text_style": "subtitle"
