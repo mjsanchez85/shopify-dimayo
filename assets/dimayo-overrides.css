@@ -1207,13 +1207,6 @@ select,
   font-size: 1.6rem;
 }
 
-.dimayo-cart-page .dimayo-cart-item-shipping {
-  font-family: var(--font-body-family);
-  color: var(--dimayo-ash);
-  font-size: 1.3rem;
-  margin-top: 0.8rem;
-}
-
 .dimayo-cart-page .dimayo-cart-item-remove {
   margin-left: auto;
   padding: 0;
